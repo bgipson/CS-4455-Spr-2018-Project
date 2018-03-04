@@ -20,7 +20,7 @@ public class Shoot : MonoBehaviour
     void FixedUpdate()
     {
 
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButton("Fire1") && Collectibles.pickle_activated == true)
         {
 
             Debug.Log("Pressed");
@@ -32,7 +32,7 @@ public class Shoot : MonoBehaviour
             }
             Debug.Log(power);
         }
-        if (Input.GetButtonUp("Fire1"))
+        if (Input.GetButtonUp("Fire1") && Collectibles.pickle_activated == true)
         {
             Shooting();
         }
