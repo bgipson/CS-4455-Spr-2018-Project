@@ -4,6 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Cheese
+  - Tomato
+  - Lettuce
   - Pickle
   layers:
   - Default
