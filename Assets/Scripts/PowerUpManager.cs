@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class PowerUpManager : MonoBehaviour {
     //Toggle through collected abilities & display
     //in the array, position 0 is pickles, 1 is cheese, 2 is tomato, and 3 is lettuce
-
+    public int powerup_num;
     public List<Texture> PowerupSprites;
     public RawImage PowerupIndicator;
     public GameObject ProgressBar;
@@ -34,6 +34,7 @@ public class PowerUpManager : MonoBehaviour {
 	void Start() {
         //powerup = Powerup.Default;
         default_enabled = true;
+        powerup_num = 0;
 	}
 
 	void Update() {
@@ -72,7 +73,7 @@ public class PowerUpManager : MonoBehaviour {
         //        break;
         //}
 
-
+        Decode_Powerups();
 
         if (pickle_enabled)
         {
@@ -106,6 +107,18 @@ public class PowerUpManager : MonoBehaviour {
         
     }
 
+    private void Decode_Powerups()
+    {
+        if (powerup_num == 1)
+            pickle_enabled = true;
+        else if (powerup_num == 2)
+            cheese_enabled = true;
+        else if (powerup_num == 3)
+            tomato_enabled = true;
+        else if (powerup_num == 4)
+            lettuce_enabled = true;
+    }
+
     private void Reset_PowerUps()
     {
         pickle_enabled = false;
@@ -120,6 +133,7 @@ public class PowerUpManager : MonoBehaviour {
         if (Input.GetKey(KeyCode.Alpha1))
         {
             //powerup = Powerup.Pickle;
+            powerup_num = 1;
             Reset_PowerUps();
             pickle_enabled = true;
         }
@@ -127,6 +141,7 @@ public class PowerUpManager : MonoBehaviour {
         if (Input.GetKey(KeyCode.Alpha2))
         {
             //powerup = Powerup.Cheese;
+            powerup_num = 2;
             Reset_PowerUps();
             cheese_enabled = true;
         }
@@ -134,6 +149,7 @@ public class PowerUpManager : MonoBehaviour {
         if (Input.GetKey(KeyCode.Alpha3))
         {
             //powerup = Powerup.Tomato;
+            powerup_num = 3;
             Reset_PowerUps();
             tomato_enabled = true;
         }
@@ -141,10 +157,26 @@ public class PowerUpManager : MonoBehaviour {
         if (Input.GetKey(KeyCode.Alpha4))
         {
             //powerup = Powerup.Lettuce;
+            powerup_num = 4;
             Reset_PowerUps();
             lettuce_enabled = true;
         }
 
+        if(Input.mouseScrollDelta.y > 0f)
+        {
+            Reset_PowerUps();
+            if (powerup_num < 4)
+                powerup_num++;
+            Debug.Log(powerup_num);
+        }
+
+        if (Input.mouseScrollDelta.y < 0f)
+        {
+            Reset_PowerUps();
+            if (powerup_num > 1)
+                powerup_num--;
+            Debug.Log(powerup_num);
+        }
     }
 
 
