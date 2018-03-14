@@ -2,6 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// TODO ANIMATIONS:
+/// 1. Shooting
+/// 2. Squishing (IDLE)
+/// 3. Squished (TURNING)
+/// 4. Squished (MOVING)
+/// 5. Hurt Animation
+/// </summary>
 public class BurgerController : MonoBehaviour {
     Animator animator;
     Rigidbody rig;
@@ -68,6 +76,10 @@ public class BurgerController : MonoBehaviour {
             animator.SetBool("HighJump", true);
             joystick = false;
         }
+
+        animator.SetBool("Squished", Input.GetKey(KeyCode.Z));
+        
+        
     }
 
     
