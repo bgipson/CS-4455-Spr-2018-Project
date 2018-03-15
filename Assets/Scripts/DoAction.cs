@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shoot : MonoBehaviour
+public class DoAction : MonoBehaviour
 {
 
     public GameObject Start_position;

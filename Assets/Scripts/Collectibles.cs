@@ -5,6 +5,7 @@ using UnityEngine;
 public class Collectibles : MonoBehaviour {
 
     public GameObject pickle;
+
     public static bool pickle_acquired;
     public static bool tomato_acquired;
     public static bool cheese_acquired;

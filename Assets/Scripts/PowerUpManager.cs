@@ -13,7 +13,7 @@ public class PowerUpManager : MonoBehaviour {
     public RawImage PowerupIndicator;
     public GameObject ProgressBar;
     public GameObject dynamicProgressBar;
-    public Shoot shoot;
+    public DoAction shoot;
     private Transform progressbarimage;
     public  bool pickle_enabled;
     public  bool cheese_enabled;
