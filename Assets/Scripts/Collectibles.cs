@@ -15,9 +15,25 @@ public class Collectibles : MonoBehaviour {
     void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    public bool getPickles() {
+        return pickle_acquired;
+    }
+
+    public bool getTomato() {
+        return tomato_acquired;
+    }
+
+    public bool getCheese() {
+        return cheese_acquired;
+    }
+
+    public bool getLettuce() {
+        return lettuce_acquired;
+    }
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
 
