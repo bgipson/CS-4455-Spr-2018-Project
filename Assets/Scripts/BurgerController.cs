@@ -48,6 +48,7 @@ public class BurgerController : MonoBehaviour {
         }
         if (Input.GetKeyUp(KeyCode.UpArrow)) {
             animator.SetBool("Jump", false);
+            rig.angularVelocity = Vector3.zero;
             joystick = false;
         }
         if (Input.GetKey(KeyCode.LeftArrow)) {
@@ -111,6 +112,7 @@ public class BurgerController : MonoBehaviour {
                 transform.position += airForward * airVelocity;
             }
             animator.SetBool("Jump", false);
+            rig.angularVelocity = Vector3.zero;
             animator.SetBool("Turning", false);
             rig.angularVelocity = Vector3.zero;
             airVelocity = 0.4f;
