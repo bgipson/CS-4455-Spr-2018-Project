@@ -77,6 +77,10 @@ public class BurgerController : MonoBehaviour {
             animator.SetBool("HighJump", true);
             joystick = false;
         }
+
+        if (Input.GetKeyDown(KeyCode.Z)) {
+            animator.SetBool("Shoot", true);
+        }
         animator.SetBool("Fast", Input.GetKey(KeyCode.LeftShift));
         //animator.SetBool("Squished", Input.GetKey(KeyCode.Z));
         
