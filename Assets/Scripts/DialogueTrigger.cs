@@ -6,6 +6,7 @@ public class DialogueTrigger : MonoBehaviour {
     //https://www.youtube.com/watch?v=_nRzoTzeyxU
 
     public Dialogue dialogue;
+    
 
     public void TriggerDialogue()
     {

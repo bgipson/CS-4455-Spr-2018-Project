@@ -6,6 +6,8 @@ public class Collectibles : MonoBehaviour {
 
     public GameObject pickle;
 
+    public static string collisionObj;
+
     public static bool pickle_acquired;
     public static bool tomato_acquired;
     public static bool cheese_acquired;
@@ -29,24 +31,28 @@ public class Collectibles : MonoBehaviour {
         if(collision.gameObject.transform.tag == "Pickle")
         {
             pickle_acquired = true;
+            collisionObj = "Pickle";
             Destroy(collision.gameObject);
         }
 
         if (collision.gameObject.transform.tag == "Tomato")
         {
             tomato_acquired = true;
+            collisionObj = "Tomato";
             Destroy(collision.gameObject);
         }
 
         if (collision.gameObject.transform.tag == "Cheese")
         {
             cheese_acquired = true;
+            collisionObj = "Cheese";
             Destroy(collision.gameObject);
         }
 
         if (collision.gameObject.transform.tag == "Lettuce")
         {
             lettuce_acquired = true;
+            collisionObj = "Lettuce";
             Destroy(collision.gameObject);
         }
 

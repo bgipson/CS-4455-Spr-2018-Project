@@ -2676,6 +2676,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 1598495189}
   animator: {fileID: 732173682}
+  timer: 0
+  doCountdown: 0
 --- !u!4 &1024760318
 Transform:
   m_ObjectHideFlags: 0
@@ -3116,8 +3118,9 @@ MonoBehaviour:
     sentences:
     - You've collected the pickle!
     - Press 1 to activate your pickle power!
-    - Press ctrl or click the mouse to shoot pickles!
-    - Hold it down longer to shoot pickles further!
+    - 'Press ctrl or click the mouse to shoot pickles!
+
+      Hold it down longer to shoot further!'
 --- !u!65 &1337409334
 BoxCollider:
   m_ObjectHideFlags: 0
