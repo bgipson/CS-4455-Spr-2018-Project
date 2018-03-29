@@ -14,17 +14,14 @@ public class BurgerController : MonoBehaviour {
     Animator animator;
     Rigidbody rig;
     public GameObject raycastPoint;
-    Collectibles manager;
     
-    public bool joystick = false;
+    bool joystick = false;
     float airVelocity = 0f;
 
     void Start () {
         animator = GetComponent<Animator>();
         rig = GetComponent<Rigidbody>();
         airVelocity = 0;
-        manager = FindObjectOfType<Collectibles>();
-        
 	}
 	
 	// Update is called once per frame
@@ -32,17 +29,8 @@ public class BurgerController : MonoBehaviour {
         readKeyboard();
         readJoystick();
         checkGround();
-        layerCheck();
     }
 
-    public GameObject cheese;
-    public GameObject tomato;
-    public GameObject lettuce;
-    public void layerCheck() {
-        cheese.SetActive(manager.getCheese());
-        tomato.SetActive(manager.getTomato());
-        lettuce.SetActive(manager.getLettuce());
-    }
     //Checks if there is solid ground under
     void checkGround() {
         Ray ray = new Ray(raycastPoint.transform.position, Vector3.down);

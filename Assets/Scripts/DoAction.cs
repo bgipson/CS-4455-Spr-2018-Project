@@ -52,7 +52,7 @@ public class DoAction : MonoBehaviour
         {
             if (Collectibles.pickle_acquired && powerUpManager.pickle_enabled) //pickle selected
             {
-                animator.SetBool("Shoot", true) ;
+                Shooting();
             }
             //else if (Collectibles.cheese_acquired && powerUpManager.cheese_enabled)
             //{
