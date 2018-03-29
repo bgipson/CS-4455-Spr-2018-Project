@@ -12,11 +12,13 @@ public class DialogueTrigger : MonoBehaviour {
         FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.name == "Burgie")
         {
+            //Debug.LogError("collision w/ burgie");
             TriggerDialogue();
         }
+        //else Debug.LogError("collision w/o burgie");
     }
 }

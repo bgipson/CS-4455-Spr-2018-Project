@@ -225,8 +225,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 90, y: -52}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 154.9, y: 23}
+  m_SizeDelta: {x: 25.3, y: 23.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &87695751
 Animator:
@@ -1630,7 +1630,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     sentences:
-    - 
+    - You've collected the tomato!
+    - Press 3 to activate your tomato power!
+    - Press ctrl or click the mouse to squish down!
 --- !u!65 &537559837
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1639,7 +1641,7 @@ BoxCollider:
   m_GameObject: {fileID: 537559830}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 2.200001, y: 2.200001, z: 2.2000082}
   m_Center: {x: 0, y: 0, z: 0}
@@ -1960,8 +1962,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 134}
-  m_SizeDelta: {x: 350, y: 150}
+  m_AnchoredPosition: {x: 1.2, y: 101.5}
+  m_SizeDelta: {x: 347.7, y: 85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &732173680
 MonoBehaviour:
@@ -1975,7 +1977,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.711}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2478,7 +2480,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     sentences:
-    - Shield
+    - You've collected the lettuce!
+    - Press 4 to activate your lettuce power!
+    - Hold ctrl or the mouse to activate your shield!
 --- !u!65 &947503621
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2487,7 +2491,7 @@ BoxCollider:
   m_GameObject: {fileID: 947503614}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 2.3237946, y: 2.1185987, z: 2.2937884}
   m_Center: {x: -0.09351044, y: 0.036144793, z: -0.22965167}
@@ -3110,7 +3114,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     sentences:
-    - Shooting pickles is fun
+    - You've collected the pickle!
+    - Press 1 to activate your pickle power!
+    - Press ctrl or click the mouse to shoot pickles!
+    - Hold it down longer to shoot pickles further!
 --- !u!65 &1337409334
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3119,7 +3126,7 @@ BoxCollider:
   m_GameObject: {fileID: 1337409328}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 2.2000012, y: 2.200001, z: 2.200006}
   m_Center: {x: 0, y: 0.0000011920929, z: -0.000030517578}
@@ -3708,7 +3715,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     sentences:
-    - Jump
+    - You've collected the cheese!
+    - Press 2 to activate your cheese power!
+    - Press ctrl or click the mouse to super jump!
 --- !u!65 &1499194807
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3717,7 +3726,7 @@ BoxCollider:
   m_GameObject: {fileID: 1499194800}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 2.200001, y: 2.2000012, z: 2.2000177}
   m_Center: {x: 0, y: 0, z: 0.000061035156}
@@ -3821,8 +3830,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 201, y: -72}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 161.82, y: -74.98}
+  m_SizeDelta: {x: 295.88, y: 123.23}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1621987139
 GameObject:
@@ -5399,9 +5408,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Close
-
-'
+  m_Text: X
 --- !u!222 &2097662543
 CanvasRenderer:
   m_ObjectHideFlags: 0

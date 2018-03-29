@@ -25,7 +25,7 @@ public class Collectibles : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("collision");
+        //Debug.Log("collision");
         if(collision.gameObject.transform.tag == "Pickle")
         {
             pickle_acquired = true;
