@@ -15,11 +15,11 @@ public class PowerUpManager : MonoBehaviour {
     public GameObject dynamicProgressBar;
     public DoAction shoot;
     private Transform progressbarimage;
-    public  bool pickle_enabled;
-    public  bool cheese_enabled;
-    public  bool tomato_enabled;
-    public  bool lettuce_enabled;
-    public  bool default_enabled;
+    public bool pickle_enabled;
+    public bool cheese_enabled;
+    public bool tomato_enabled;
+    public bool lettuce_enabled;
+    public bool default_enabled;
 
     //public enum Powerup
     //{

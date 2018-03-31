@@ -12,14 +12,16 @@ public class DialogueManager : MonoBehaviour {
     public int timer;
     public bool doCountdown;
     private Queue<string> sentences;
+    public PowerUpManager powerUpManager;
 
-
-	void Start () {
-        sentences = new Queue<string>();	
+    void Start () {
+        sentences = new Queue<string>();
 	}
 
     private void Update()
     {
+
+        //"you've collected the ____!"
         if (doCountdown)
         {
             if (timer == 0)
@@ -30,23 +32,70 @@ public class DialogueManager : MonoBehaviour {
             }
             else timer--;
         }
+
+        //"Press __ to activate your power"
         if (sentences.Count == 1)
         {
-            Debug.LogError(Collectibles.collisionObj);
             if (Collectibles.collisionObj == "Pickle")
             {
-                if (Input.GetKey(KeyCode.Alpha1))
+                if (powerUpManager.pickle_enabled)   //Input.GetKey(KeyCode.Alpha1))
                 {
                     DisplayNextSentence();
-                    Debug.LogError("it did it!");
+                }
+            }
+            else if (Collectibles.collisionObj == "Cheese")
+            {
+                if (powerUpManager.cheese_enabled)
+                {
+                    DisplayNextSentence();
+                }
+            }
+            else if (Collectibles.collisionObj == "Tomato")
+            {
+                if (powerUpManager.tomato_enabled)
+                {
+                    DisplayNextSentence();
+                }
+            }
+            else if (Collectibles.collisionObj == "Lettuce")
+            {
+                if (powerUpManager.lettuce_enabled)
+                {
+                    DisplayNextSentence();
                 }
             }
         }
+
+        //"Fire1 to use the power"
         if (sentences.Count == 0)
         {
-            if (Input.GetButton("Fire1"))
+            if (Collectibles.collisionObj == "Pickle")
             {
-                DisplayNextSentence();
+                if (powerUpManager.pickle_enabled && Input.GetButton("Fire1"))   //Input.GetKey(KeyCode.Alpha1))
+                {
+                    DisplayNextSentence();
+                }
+            }
+            else if (Collectibles.collisionObj == "Cheese")
+            {
+                if (powerUpManager.cheese_enabled && Input.GetButton("Fire1"))
+                {
+                    DisplayNextSentence();
+                }
+            }
+            else if (Collectibles.collisionObj == "Tomato")
+            {
+                if (powerUpManager.tomato_enabled && Input.GetButton("Fire1"))
+                {
+                    DisplayNextSentence();
+                }
+            }
+            else if (Collectibles.collisionObj == "Lettuce")
+            {
+                if (powerUpManager.lettuce_enabled && Input.GetButton("Fire1"))
+                {
+                    DisplayNextSentence();
+                }
             }
         }
     }
