@@ -2678,6 +2678,7 @@ MonoBehaviour:
   animator: {fileID: 732173682}
   timer: 0
   doCountdown: 0
+  powerUpManager: {fileID: 356077308}
 --- !u!4 &1024760318
 Transform:
   m_ObjectHideFlags: 0
