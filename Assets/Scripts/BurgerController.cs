@@ -14,14 +14,18 @@ public class BurgerController : MonoBehaviour {
     Animator animator;
     Rigidbody rig;
     public GameObject raycastPoint;
-    
-    bool joystick = false;
+    Collectibles manager;
+    public PowerUpManager powerUpManager;
+
+    public bool joystick = false;
     float airVelocity = 0f;
 
     void Start () {
         animator = GetComponent<Animator>();
         rig = GetComponent<Rigidbody>();
         airVelocity = 0;
+        manager = FindObjectOfType<Collectibles>();
+        
 	}
 	
 	// Update is called once per frame
@@ -29,8 +33,17 @@ public class BurgerController : MonoBehaviour {
         readKeyboard();
         readJoystick();
         checkGround();
+        layerCheck();
     }
 
+    public GameObject cheese;
+    public GameObject tomato;
+    public GameObject lettuce;
+    public void layerCheck() {
+        //cheese.SetActive(manager.getCheese());
+        //tomato.SetActive(manager.getTomato());
+        //lettuce.SetActive(manager.getLettuce());
+    }
     //Checks if there is solid ground under
     void checkGround() {
         Ray ray = new Ray(raycastPoint.transform.position, Vector3.down);
@@ -73,14 +86,15 @@ public class BurgerController : MonoBehaviour {
             animator.SetBool("Turning", false);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space)) {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
             animator.SetBool("HighJump", true);
             joystick = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.Z)) {
-            animator.SetBool("Shoot", true);
-        }
+        //if (Input.GetKeyDown(KeyCode.Z) && Collectibles.pickle_acquired == true && powerUpManager.pickle_enabled == true) {
+        //    animator.SetBool("Shoot", true);
+        //}
         animator.SetBool("Fast", Input.GetKey(KeyCode.LeftShift));
         //animator.SetBool("Squished", Input.GetKey(KeyCode.Z));
         

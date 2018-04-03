@@ -9,17 +9,19 @@ public class PowerUpManager : MonoBehaviour {
     //Toggle through collected abilities & display
     //in the array, position 0 is pickles, 1 is cheese, 2 is tomato, and 3 is lettuce
     public int powerup_num;
+    public ParticleSystem particle;
     public List<Texture> PowerupSprites;
     public RawImage PowerupIndicator;
     public GameObject ProgressBar;
     public GameObject dynamicProgressBar;
     public DoAction shoot;
     private Transform progressbarimage;
-    public bool pickle_enabled;
-    public bool cheese_enabled;
-    public bool tomato_enabled;
-    public bool lettuce_enabled;
-    public bool default_enabled;
+    public  bool pickle_enabled;
+    public  bool cheese_enabled;
+    public  bool tomato_enabled;
+    public  bool lettuce_enabled;
+    public  bool default_enabled;
+
 
     //public enum Powerup
     //{
@@ -77,7 +79,7 @@ public class PowerUpManager : MonoBehaviour {
 
         if (pickle_enabled)
         {
-            //Debug.Log(shoot.power);
+            Debug.Log(shoot.power);
             PowerupIndicator.texture = PowerupSprites[0];
             ProgressBar.SetActive(true);
             dynamicProgressBar.GetComponent<Image>().fillAmount = (shoot.power - 30f) / 120f;
@@ -98,6 +100,7 @@ public class PowerUpManager : MonoBehaviour {
         {
             ProgressBar.SetActive(false);
             PowerupIndicator.texture = PowerupSprites[3];
+           
         }
         else if (default_enabled)
         {
