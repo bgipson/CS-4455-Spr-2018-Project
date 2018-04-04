@@ -6,6 +6,8 @@ public class Collectibles : MonoBehaviour {
 
     public GameObject pickle;
 
+    public static string collisionObj;
+
     public static bool pickle_acquired;
     public static bool tomato_acquired;
     public static bool cheese_acquired;
@@ -15,25 +17,9 @@ public class Collectibles : MonoBehaviour {
     void Start () {
 		
 	}
-
-    public bool getPickles() {
-        return pickle_acquired;
-    }
-
-    public bool getTomato() {
-        return tomato_acquired;
-    }
-
-    public bool getCheese() {
-        return cheese_acquired;
-    }
-
-    public bool getLettuce() {
-        return lettuce_acquired;
-    }
-
-    // Update is called once per frame
-    void Update () {
+	
+	// Update is called once per frame
+	void Update () {
 		
 	}
 
@@ -41,28 +27,32 @@ public class Collectibles : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("collision");
+        //Debug.Log("collision");
         if(collision.gameObject.transform.tag == "Pickle")
         {
             pickle_acquired = true;
+            collisionObj = "Pickle";
             Destroy(collision.gameObject);
         }
 
         if (collision.gameObject.transform.tag == "Tomato")
         {
             tomato_acquired = true;
+            collisionObj = "Tomato";
             Destroy(collision.gameObject);
         }
 
         if (collision.gameObject.transform.tag == "Cheese")
         {
             cheese_acquired = true;
+            collisionObj = "Cheese";
             Destroy(collision.gameObject);
         }
 
         if (collision.gameObject.transform.tag == "Lettuce")
         {
             lettuce_acquired = true;
+            collisionObj = "Lettuce";
             Destroy(collision.gameObject);
         }
 

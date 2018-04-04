@@ -10,18 +10,19 @@ public class DoAction : MonoBehaviour
     public float power;
     public PowerUpManager powerUpManager;
     Animator animator;
+    public ParticleSystem particle;
     //float time = 0f;
-   
+
     void Start()
     {
         power = 30f;
         animator = GetComponent<Animator>();
     }
     
-    void FixedUpdate()
+    void Update()
     {
         
-        if (Input.GetButton("Fire1")) //button pressed
+        if (Input.GetKey(KeyCode.Z)) //button pressed
         {
             if (Collectibles.pickle_acquired && powerUpManager.pickle_enabled) //pickle selected
             {
@@ -44,11 +45,12 @@ public class DoAction : MonoBehaviour
             else if (Collectibles.lettuce_acquired && powerUpManager.lettuce_enabled)
             {
                 //shield enabled
+                particle.gameObject.SetActive(true);
             }
 
         }
 
-        if (Input.GetButtonUp("Fire1")) //button let go
+        if (Input.GetKeyUp(KeyCode.Z)) //button let go
         {
             if (Collectibles.pickle_acquired && powerUpManager.pickle_enabled) //pickle selected
             {
@@ -66,6 +68,7 @@ public class DoAction : MonoBehaviour
             else if (Collectibles.lettuce_acquired && powerUpManager.lettuce_enabled)
             {
                 //shield disabled
+                particle.gameObject.SetActive(false);
             }
         }
         

@@ -8,6 +8,7 @@ public class PowerUpManager : MonoBehaviour {
     //Toggle through collected abilities & display
     //in the array, position 0 is pickles, 1 is cheese, 2 is tomato, and 3 is lettuce
     public int powerup_num;
+    public ParticleSystem particle;
     public List<Texture> PowerupSprites;
     public RawImage PowerupIndicator;
     public GameObject ProgressBar;
@@ -19,6 +20,7 @@ public class PowerUpManager : MonoBehaviour {
     public  bool tomato_enabled;
     public  bool lettuce_enabled;
     public  bool default_enabled;
+
 
     //public enum Powerup
     //{
@@ -97,6 +99,7 @@ public class PowerUpManager : MonoBehaviour {
         {
             ProgressBar.SetActive(false);
             PowerupIndicator.texture = PowerupSprites[3];
+           
         }
         else if (default_enabled)
         {
