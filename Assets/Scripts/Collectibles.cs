@@ -23,6 +23,18 @@ public class Collectibles : MonoBehaviour {
 		
 	}
 
+    public bool getCheese() {
+        return cheese_acquired;
+    }
+
+    public bool getTomato() {
+        return tomato_acquired;
+    }
+
+    public bool getLettuce() {
+        return lettuce_acquired;
+    }
+
     
 
     private void OnCollisionEnter(Collision collision)

@@ -58,6 +58,19 @@ public class BurgerController : MonoBehaviour {
             animator.SetBool("Jump", true);
             joystick = false;
         }
+
+        if (!joystick) {
+            if (animator.GetBool("HighJump") && !animator.GetBool("Grounded")) {
+                //float airAngelDiff = Mathf.Abs(Vector3.Angle(dir, airForward));
+                //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(airForward), 0.1f);
+                airVelocity = Mathf.Lerp(airVelocity, 0.9f, 0.01f);
+                transform.position += transform.forward * airVelocity;
+            }
+            if (animator.GetBool("Grounded")) {
+                airVelocity = Mathf.Lerp(airVelocity, 0, 0.01f);
+            }
+        }
+
         if (Input.GetKeyUp(KeyCode.UpArrow)) {
             animator.SetBool("Jump", false);
             joystick = false;

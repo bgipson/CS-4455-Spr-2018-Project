@@ -277,7 +277,7 @@ GameObject:
   - component: {fileID: 114039754906619776}
   m_Layer: 0
   m_Name: Burgie
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -433,13 +433,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1582691681072092}
-  m_LocalRotation: {x: 0.50883836, y: -0.4910026, z: 0.49100283, w: 0.50883824}
+  m_LocalRotation: {x: 0.5088387, y: -0.49100223, z: 0.49100223, w: 0.5088387}
   m_LocalPosition: {x: 0.01562494, y: -2.43, z: -0.1061938}
   m_LocalScale: {x: 2.497863, y: 2.290038, z: 1.5125861}
   m_Children: []
   m_Father: {fileID: 4472702382620924}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90.00001, y: 0, z: 87.956}
+  m_LocalEulerAnglesHint: {x: 90, y: 2.043991, z: 89.99999}
 --- !u!4 &4695958784330200
 Transform:
   m_ObjectHideFlags: 1
@@ -985,6 +985,7 @@ MonoBehaviour:
   bullet: {fileID: 54928231809653438, guid: cdea0a1eb0103d842a907abe36dfe984, type: 2}
   power: 0
   powerUpManager: {fileID: 0}
+  particle: {fileID: 198726973542859450}
 --- !u!114 &114693429712615588
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -997,6 +998,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   raycastPoint: {fileID: 1915914024981174}
+  joystick: 0
+  cheese: {fileID: 1483351138347760}
+  tomato: {fileID: 1198895190650364}
+  lettuce: {fileID: 1427159149230416}
 --- !u!136 &136278453441723950
 CapsuleCollider:
   m_ObjectHideFlags: 1

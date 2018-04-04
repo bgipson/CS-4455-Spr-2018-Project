@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44567055, g: 0.4953701, b: 0.57421434, a: 1}
+  m_IndirectSpecularColor: {r: 0.44566995, g: 0.49536926, b: 0.574213, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1631,10 +1631,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    sentences:
-    - You've collected the tomato!
-    - Press 3 to activate your tomato power!
-    - Press ctrl or click the mouse to squish down!
+    sentences: []
 --- !u!65 &537559837
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1784,111 +1781,6 @@ Prefab:
       propertyPath: powerUpManager
       value: 
       objectReference: {fileID: 356077308}
-    - target: {fileID: 4554762918287892, guid: 1f265cecc31947841ac35dc51126f923, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0.00000031794355
-      objectReference: {fileID: 0}
-    - target: {fileID: 4554762918287892, guid: 1f265cecc31947841ac35dc51126f923, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0.7196065
-      objectReference: {fileID: 0}
-    - target: {fileID: 4554762918287892, guid: 1f265cecc31947841ac35dc51126f923, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0.00000064701004
-      objectReference: {fileID: 0}
-    - target: {fileID: 4554762918287892, guid: 1f265cecc31947841ac35dc51126f923, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.69438213
-      objectReference: {fileID: 0}
-    - target: {fileID: 4554762918287892, guid: 1f265cecc31947841ac35dc51126f923, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -0.1042956
-      objectReference: {fileID: 0}
-    - target: {fileID: 4554762918287892, guid: 1f265cecc31947841ac35dc51126f923, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -0.01999998
-      objectReference: {fileID: 0}
-    - target: {fileID: 4554762918287892, guid: 1f265cecc31947841ac35dc51126f923, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -0.1019152
-      objectReference: {fileID: 0}
-    - target: {fileID: 4554762918287892, guid: 1f265cecc31947841ac35dc51126f923, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4666216168546704, guid: 1f265cecc31947841ac35dc51126f923, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0.5088387
-      objectReference: {fileID: 0}
-    - target: {fileID: 4666216168546704, guid: 1f265cecc31947841ac35dc51126f923, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0.49100223
-      objectReference: {fileID: 0}
-    - target: {fileID: 4666216168546704, guid: 1f265cecc31947841ac35dc51126f923, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.49100223
-      objectReference: {fileID: 0}
-    - target: {fileID: 4666216168546704, guid: 1f265cecc31947841ac35dc51126f923, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.5088387
-      objectReference: {fileID: 0}
-    - target: {fileID: 4666216168546704, guid: 1f265cecc31947841ac35dc51126f923, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 4666216168546704, guid: 1f265cecc31947841ac35dc51126f923, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 2.043991
-      objectReference: {fileID: 0}
-    - target: {fileID: 4666216168546704, guid: 1f265cecc31947841ac35dc51126f923, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 89.99999
-      objectReference: {fileID: 0}
-    - target: {fileID: 4666216168546704, guid: 1f265cecc31947841ac35dc51126f923, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.01562494
-      objectReference: {fileID: 0}
-    - target: {fileID: 4666216168546704, guid: 1f265cecc31947841ac35dc51126f923, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -2.43
-      objectReference: {fileID: 0}
-    - target: {fileID: 4666216168546704, guid: 1f265cecc31947841ac35dc51126f923, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -0.1061938
-      objectReference: {fileID: 0}
-    - target: {fileID: 4434188785619476, guid: 1f265cecc31947841ac35dc51126f923, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4967405922226882, guid: 1f265cecc31947841ac35dc51126f923, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -1.27
-      objectReference: {fileID: 0}
-    - target: {fileID: 4309967454687734, guid: 1f265cecc31947841ac35dc51126f923, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -1.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 4695958784330200, guid: 1f265cecc31947841ac35dc51126f923, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -1.47
-      objectReference: {fileID: 0}
-    - target: {fileID: 4554762918287892, guid: 1f265cecc31947841ac35dc51126f923, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4554762918287892, guid: 1f265cecc31947841ac35dc51126f923, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 92.04401
-      objectReference: {fileID: 0}
-    - target: {fileID: 1998398560837912, guid: 1f265cecc31947841ac35dc51126f923, type: 2}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 114039754906619776, guid: 1f265cecc31947841ac35dc51126f923,
-        type: 2}
-      propertyPath: particle
-      value: 
-      objectReference: {fileID: 726504806}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f265cecc31947841ac35dc51126f923, type: 2}
   m_IsPrefabParent: 0
@@ -1934,11 +1826,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cdea0a1eb0103d842a907abe36dfe984, type: 2}
   m_IsPrefabParent: 0
---- !u!198 &726504806 stripped
-ParticleSystem:
-  m_PrefabParentObject: {fileID: 198726973542859450, guid: 1f265cecc31947841ac35dc51126f923,
-    type: 2}
-  m_PrefabInternal: {fileID: 712344727}
 --- !u!1 &732173678
 GameObject:
   m_ObjectHideFlags: 0
@@ -2228,6 +2115,7 @@ Transform:
   - {fileID: 537559833}
   - {fileID: 1337409329}
   - {fileID: 947503615}
+  - {fileID: 1357583005}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2491,10 +2379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    sentences:
-    - You've collected the lettuce!
-    - Press 4 to activate your lettuce power!
-    - Hold ctrl or the mouse to activate your shield!
+    sentences: []
 --- !u!65 &947503621
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2686,11 +2571,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1495f24ea5b6f09409df75a15977b84b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueText: {fileID: 1598495189}
-  animator: {fileID: 732173682}
+  dialogueText: {fileID: 0}
+  animator: {fileID: 0}
   timer: 0
   doCountdown: 0
-  powerUpManager: {fileID: 356077308}
+  powerUpManager: {fileID: 0}
 --- !u!4 &1024760318
 Transform:
   m_ObjectHideFlags: 0
@@ -3128,12 +3013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    sentences:
-    - You've collected the pickle!
-    - Press 1 to activate your pickle power!
-    - 'Press ctrl or click the mouse to shoot pickles!
-
-      Hold it down longer to shoot further!'
+    sentences: []
 --- !u!65 &1337409334
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3339,6 +3219,134 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.12825516, y: 0.09683266, z: 0.08897306}
   m_Center: {x: -0.0000000037252903, y: 0, z: 0}
+--- !u!1 &1357583004
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1483351138347760, guid: 1f265cecc31947841ac35dc51126f923,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1357583005}
+  - component: {fileID: 1357583011}
+  - component: {fileID: 1357583010}
+  - component: {fileID: 1357583009}
+  - component: {fileID: 1357583008}
+  - component: {fileID: 1357583007}
+  - component: {fileID: 1357583006}
+  m_Layer: 0
+  m_Name: Cheese (1)
+  m_TagString: Cheese
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1357583005
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4967405922226882, guid: 1f265cecc31947841ac35dc51126f923,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1357583004}
+  m_LocalRotation: {x: -0.4910025, y: 0.508839, z: 0.50883794, w: 0.4910025}
+  m_LocalPosition: {x: -5.9, y: -3.6, z: -14}
+  m_LocalScale: {x: 2.138901, y: 1.7792609, z: 0.06003003}
+  m_Children: []
+  m_Father: {fileID: 837621259}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: -89.97201, y: 0, z: 92.04401}
+--- !u!65 &1357583006
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1357583004}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 2.200001, y: 2.2000012, z: 2.2000177}
+  m_Center: {x: 0, y: 0, z: 0.000061035156}
+--- !u!114 &1357583007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1357583004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8971746c201c5d468cbb9863294e8cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    sentences: []
+--- !u!65 &1357583008
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1357583004}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.200001, y: 2.2000012, z: 2.2000177}
+  m_Center: {x: 0, y: 0, z: 0.000061035156}
+--- !u!114 &1357583009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1357583004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 202dcd8c92cc3464c8440a84b96a862e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickle: {fileID: 1357583004}
+--- !u!23 &1357583010
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 23600082259037348, guid: 1f265cecc31947841ac35dc51126f923,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1357583004}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: acf3c03e8d7fcac4cac44bc1e6fc5940, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1357583011
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 33692031131150902, guid: 1f265cecc31947841ac35dc51126f923,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1357583004}
+  m_Mesh: {fileID: 4300002, guid: 028f491c8e51fa14ca586b31bea354a5, type: 3}
 --- !u!1 &1372137342
 GameObject:
   m_ObjectHideFlags: 0
@@ -3730,10 +3738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    sentences:
-    - You've collected the cheese!
-    - Press 2 to activate your cheese power!
-    - Press ctrl or click the mouse to super jump!
+    sentences: []
 --- !u!65 &1499194807
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -16,6 +16,7 @@ public class DialogueManager : MonoBehaviour {
 
     void Start () {
         sentences = new Queue<string>();
+        powerUpManager = FindObjectOfType<PowerUpManager>();
 	}
 
     private void Update()
@@ -102,7 +103,9 @@ public class DialogueManager : MonoBehaviour {
 
     public void StartDialogue(Dialogue dialogue)
     {
-        animator.SetBool("IsOpen", true);
+        if (animator) {
+            animator.SetBool("IsOpen", true);
+        }
         sentences.Clear();
         timer = countdown;
         doCountdown = true;
@@ -139,6 +142,8 @@ public class DialogueManager : MonoBehaviour {
     
         void EndDialogue()
     {
-        animator.SetBool("IsOpen", false);
+        if (animator) {
+            animator.SetBool("IsOpen", false);
+        }
     }
 }
