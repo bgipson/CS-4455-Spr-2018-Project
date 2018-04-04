@@ -60,17 +60,17 @@ public class BurgerController : MonoBehaviour {
         }
         if (Input.GetKeyUp(KeyCode.UpArrow)) {
             animator.SetBool("Jump", false);
-            rig.angularVelocity = Vector3.zero;
             joystick = false;
         }
         if (Input.GetKey(KeyCode.LeftArrow)) {
             rig.angularVelocity = new Vector3(rig.angularVelocity.x, -4, 0);
             animator.SetBool("Turning", true);
             joystick = false;
-        } 
-        if (Input.GetKeyUp(KeyCode.LeftArrow)) {
+        } else if (Input.GetKeyUp(KeyCode.LeftArrow)) {
             rig.angularVelocity = Vector3.zero;
             animator.SetBool("Turning", false);
+        } else {
+            rig.angularVelocity = Vector3.zero;
         }
 
         if (Input.GetKey(KeyCode.RightArrow)) {
@@ -90,11 +90,10 @@ public class BurgerController : MonoBehaviour {
             joystick = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.Z)) {
-            animator.SetBool("Shoot", true);
-        }
+        //if (Input.GetKeyDown(KeyCode.Z)) {
+        //    animator.SetBool("Shoot", true);
+        //}
         animator.SetBool("Fast", Input.GetKey(KeyCode.LeftShift));
-        //animator.SetBool("Squished", Input.GetKey(KeyCode.Z));
         
         
     }

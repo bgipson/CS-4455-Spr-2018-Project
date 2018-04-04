@@ -6,5 +6,5 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Burgie.unity
-    guid: 4f86c8756d5040a48a4102ecdd3b3345
+    path: Assets/_Scenes/Tutorial.unity
+    guid: 9019741855c52da4c97b871ef1a2e071
