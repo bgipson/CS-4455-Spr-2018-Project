@@ -3924,7 +3924,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 1
   m_Events:
-  - time: 0.41666666
+  - time: 0.38333333
     functionName: playAudio
     data: 
     objectReferenceParameter: {fileID: 8300000, guid: 8e4754a6e5af3424f96094bac81b0606,

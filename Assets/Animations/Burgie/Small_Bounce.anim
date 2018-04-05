@@ -4260,6 +4260,14 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 1
   m_Events:
+  - time: 0.35
+    functionName: playAudio
+    data: 
+    objectReferenceParameter: {fileID: 8300000, guid: 8e4754a6e5af3424f96094bac81b0606,
+      type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 0.4
     functionName: playParticle
     data: 

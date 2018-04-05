@@ -275,6 +275,7 @@ GameObject:
   - component: {fileID: 136278453441723950}
   - component: {fileID: 114031728324673770}
   - component: {fileID: 114039754906619776}
+  - component: {fileID: 114708541257737438}
   m_Layer: 0
   m_Name: Burgie
   m_TagString: Player
@@ -1002,6 +1003,17 @@ MonoBehaviour:
   cheese: {fileID: 1483351138347760}
   tomato: {fileID: 1198895190650364}
   lettuce: {fileID: 1427159149230416}
+--- !u!114 &114708541257737438
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1998398560837912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6f4a140df60fba49903b432a340ef07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!136 &136278453441723950
 CapsuleCollider:
   m_ObjectHideFlags: 1
