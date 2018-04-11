@@ -9,6 +9,7 @@ TagManager:
   - Lettuce
   - Pickle
   - BgMusic
+  - TomatoIgnore
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - 
   - Ground
   - Burg
-  - 
+  - TomatoIgnoreLayer
   - 
   - 
   - 
