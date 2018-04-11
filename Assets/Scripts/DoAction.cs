@@ -12,16 +12,18 @@ public class DoAction : MonoBehaviour
     Animator animator;
     public ParticleSystem particle;
     //float time = 0f;
+    bool tomatoIgnore;
 
     void Start()
     {
+        tomatoIgnore = false;
         power = 30f;
         animator = GetComponent<Animator>();
     }
     
     void Update()
     {
-        
+        //Debug.LogError("tomatoIgnore:" + tomatoIgnore);
         if (Input.GetKey(KeyCode.Z)) //button pressed
         {
             if (Collectibles.pickle_acquired && powerUpManager.pickle_enabled) //pickle selected
@@ -41,6 +43,7 @@ public class DoAction : MonoBehaviour
             {
                 //squish enabled
                 animator.SetBool("Squished", true);
+                Physics.IgnoreLayerCollision(0, 10);
             }
             else if (Collectibles.lettuce_acquired && powerUpManager.lettuce_enabled)
             {
@@ -60,10 +63,11 @@ public class DoAction : MonoBehaviour
             //{
             //    //super jump
             //}
-            else if (Collectibles.tomato_acquired && powerUpManager.tomato_enabled) //Collectibles.tomato_acquired && 
+            else if (Collectibles.tomato_acquired && powerUpManager.tomato_enabled && !tomatoIgnore) //Collectibles.tomato_acquired && 
             {
-                //squish disabled
-                animator.SetBool("Squished", false);
+                    //squish disabled
+                    animator.SetBool("Squished", false);
+                    Physics.IgnoreLayerCollision(0, 10, false);
             }
             else if (Collectibles.lettuce_acquired && powerUpManager.lettuce_enabled)
             {
@@ -73,6 +77,23 @@ public class DoAction : MonoBehaviour
         }
         
         
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "TomatoIgnore")
+        {
+            tomatoIgnore = true;
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "TomatoIgnore")
+        {
+            tomatoIgnore = false;
+            animator.SetBool("Squished", false);
+        }
     }
 
     public void Shooting()
