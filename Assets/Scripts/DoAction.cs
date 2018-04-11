@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DoAction : MonoBehaviour
 {
@@ -84,6 +85,10 @@ public class DoAction : MonoBehaviour
         if (other.tag == "TomatoIgnore")
         {
             tomatoIgnore = true;
+        }
+        if (other.tag == "EndLevel")
+        {
+            SceneManager.LoadScene("Tutorial");
         }
     }
 
