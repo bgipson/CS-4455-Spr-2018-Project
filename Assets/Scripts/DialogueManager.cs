@@ -8,7 +8,7 @@ public class DialogueManager : MonoBehaviour {
 
     public Text dialogueText;
     public Animator animator;
-    int countdown = 150;
+    int countdown = 100;
     public int timer;
     public bool doCountdown;
     private Queue<string> sentences;

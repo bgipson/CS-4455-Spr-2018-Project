@@ -1632,7 +1632,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    sentences: []
+    sentences:
+    - You've collected the tomato!
+    - Press '3' or scroll to activate your tomato power!
+    - Hold down 'z' to squish down and fit under obstacles!
 --- !u!65 &537559837
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2396,7 +2399,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    sentences: []
+    sentences:
+    - You've collected the lettuce!
+    - Press '4' or scroll to activate your lettuce power!
+    - Hold down 'z' to activate your shield!
 --- !u!65 &947503621
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2723,11 +2729,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1495f24ea5b6f09409df75a15977b84b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueText: {fileID: 0}
-  animator: {fileID: 0}
+  dialogueText: {fileID: 1598495189}
+  animator: {fileID: 732173682}
   timer: 0
   doCountdown: 0
-  powerUpManager: {fileID: 0}
+  powerUpManager: {fileID: 356077308}
 --- !u!4 &1024760318
 Transform:
   m_ObjectHideFlags: 0
@@ -3435,7 +3441,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    sentences: []
+    sentences:
+    - You've collected the pickle!
+    - Press '1' or scroll to activate your pickle power!
+    - Press 'z' to shoot pickles at your enemies! The longer you hold it down, the
+      faster they will fire!
 --- !u!65 &1337409334
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3662,7 +3672,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1357583005
 Transform:
   m_ObjectHideFlags: 0
@@ -4160,7 +4170,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    sentences: []
+    sentences:
+    - You've collected the cheese!
+    - Press '2' or scroll to activate your cheese power!
+    - Press 'z' to super jump!
 --- !u!65 &1499194807
 BoxCollider:
   m_ObjectHideFlags: 0
