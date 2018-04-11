@@ -3,6 +3,7 @@ using System.Collections;
 
 public class EnemyMovement : MonoBehaviour
 {
+    Animator animator;
     Transform player;
     //PlayerHealth playerHealth;
     //EnemyHealth enemyHealth;
@@ -10,8 +11,7 @@ public class EnemyMovement : MonoBehaviour
     public OnFloor onFloor;
     void Awake()
     {
-
-        
+        animator = GetComponentInChildren<Animator>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         //playerHealth = player.GetComponent<PlayerHealth>();
         //enemyHealth = GetComponent<EnemyHealth>();
@@ -26,6 +26,7 @@ public class EnemyMovement : MonoBehaviour
             nav.enabled = true;
             nav.SetDestination(player.position);
             nav.speed = 10f;
+            if (animator) animator.SetBool("Attacking", true);
         }
         else
         {
