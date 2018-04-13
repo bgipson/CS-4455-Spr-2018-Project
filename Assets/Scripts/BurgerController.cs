@@ -103,10 +103,10 @@ public class BurgerController : MonoBehaviour {
             animator.SetBool("Turning", false);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            animator.SetBool("HighJump", true);
-            joystick = false;
-        }
+        //if (Input.GetKeyDown(KeyCode.Space)) {
+        //    animator.SetBool("HighJump", true);
+        //    joystick = false;
+        //}
 
         //if (Input.GetKeyDown(KeyCode.Z)) {
         //    animator.SetBool("Shoot", true);
@@ -151,10 +151,10 @@ public class BurgerController : MonoBehaviour {
             airVelocity = 0.4f;
         }
 
-        if (Input.GetButtonDown("Jump")) {
-            animator.SetBool("HighJump", true);
-            joystick = true;
-        }
+        //if (Input.GetButtonDown("Jump")) {
+        //    animator.SetBool("HighJump", true);
+        //    joystick = true;
+        //}
     }
 
     Vector3 airForward;
