@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class DoAction : MonoBehaviour
 {
-
+    public bool shield_on;
     public GameObject Start_position;
     public Rigidbody bullet;
     public float power;
@@ -18,8 +18,9 @@ public class DoAction : MonoBehaviour
     void Start()
     {
         tomatoIgnore = false;
-        power = 30f;
+        power = 10f;
         animator = GetComponent<Animator>();
+        shield_on = false;
     }
     
     void Update()
@@ -30,7 +31,7 @@ public class DoAction : MonoBehaviour
             if (Collectibles.pickle_acquired && powerUpManager.pickle_enabled) //pickle selected
             {
                 Debug.Log("Pressed");
-                if (power < 150f)
+                if (power < 80f)
                 {
                     power += 2f;
                 }
@@ -50,6 +51,7 @@ public class DoAction : MonoBehaviour
             {
                 //shield enabled
                 particle.gameObject.SetActive(true);
+                shield_on = true;
             }
 
         }
@@ -74,6 +76,7 @@ public class DoAction : MonoBehaviour
             {
                 //shield disabled
                 particle.gameObject.SetActive(false);
+                shield_on = false;
             }
         }
         
@@ -105,7 +108,7 @@ public class DoAction : MonoBehaviour
     {
         Rigidbody instantiated_projectile = Instantiate(bullet, Start_position.transform.position, Start_position.transform.rotation);
         instantiated_projectile.AddForce(Start_position.transform.forward * power/10 + new Vector3(0f, 5f/10, 0f), ForceMode.Impulse);
-        power = 30f;
+        power = 10f;
        
     }
     

@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33930285269219304}
   - component: {fileID: 136182604988818428}
   - component: {fileID: 23190229022260856}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 33190897268355944}
   - component: {fileID: 136521745761630234}
   - component: {fileID: 23035889174034448}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 33932983496447352}
   - component: {fileID: 136671403822958324}
   - component: {fileID: 23549747943539008}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 33831548707200780}
   - component: {fileID: 136324080599849100}
   - component: {fileID: 23921445770891410}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 33662440023263690}
   - component: {fileID: 136813639350080328}
   - component: {fileID: 23744446256233066}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 33513158653761254}
   - component: {fileID: 136852100659028818}
   - component: {fileID: 23266431170920372}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 33326111607081624}
   - component: {fileID: 136035789781557196}
   - component: {fileID: 23195041114871368}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 33101315339790168}
   - component: {fileID: 136635262001818346}
   - component: {fileID: 23021399085605616}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 33598296514453546}
   - component: {fileID: 136110147189700610}
   - component: {fileID: 23858944270419362}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cylinder (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,9 +185,9 @@ GameObject:
   - component: {fileID: 136273604280092386}
   - component: {fileID: 23859714275439844}
   - component: {fileID: 54928231809653438}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tomato Slice
-  m_TagString: Untagged
+  m_TagString: TomatoIgnore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

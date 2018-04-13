@@ -12,6 +12,8 @@ using UnityEngine.SceneManagement;
 /// 5. Hurt Animation
 /// </summary>
 public class BurgerController : MonoBehaviour {
+    DoAction doAction;
+    PowerUpManager powerUpManager;
     Animator animator;
     Rigidbody rig;
     public GameObject raycastPoint;
