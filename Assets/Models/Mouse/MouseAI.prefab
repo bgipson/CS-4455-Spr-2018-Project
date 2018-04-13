@@ -157,9 +157,10 @@ GameObject:
   - component: {fileID: 54781367865435896}
   - component: {fileID: 195822343104075984}
   - component: {fileID: 114493282263557802}
+  - component: {fileID: 65219498351279906}
   m_Layer: 0
   m_Name: MouseAI
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -440,7 +441,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1545196065871962}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 83.6, y: 2.22, z: -49.4}
+  m_LocalPosition: {x: -21.731342, y: -5.5792217, z: -3.203117}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4568302908408074}
@@ -788,7 +789,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1545196065871962}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -796,6 +797,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!65 &65219498351279906
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1545196065871962}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.1794777, y: 1.3005943, z: 5.5922894}
+  m_Center: {x: -0.11457825, y: 0.15029716, z: -0.11238122}
 --- !u!65 &65889036023126390
 BoxCollider:
   m_ObjectHideFlags: 1

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// TODO ANIMATIONS:
@@ -15,9 +16,12 @@ public class BurgerController : MonoBehaviour {
     Rigidbody rig;
     public GameObject raycastPoint;
     Collectibles manager;
-    
+    int health = 3;
+
     public bool joystick = false;
     float airVelocity = 0f;
+
+    bool invincible = false;
 
     void Start () {
         animator = GetComponent<Animator>();
@@ -183,4 +187,33 @@ public class BurgerController : MonoBehaviour {
             audioManager.playAudio(clip);
         }
     }
+
+
+    void OnTriggerStay(Collider other) {
+        if (!invincible && other.gameObject.tag == "Enemy") {
+            health -= 1;
+            if (health <= 0) {
+                animator.SetBool("Dead", true);
+                invincible = true;
+                ScreenTransition transition = FindObjectOfType<ScreenTransition>();
+                if (transition) {
+                    transition.fadeInToLevel(SceneManager.GetActiveScene().buildIndex);
+                }
+                rig.constraints = RigidbodyConstraints.FreezeAll;
+            } else {
+                animator.SetBool("Damage", true);
+                StartCoroutine(hurtBufferPeriod(1.3f));
+            }
+            
+        }
+    }
+
+    //Buffer period between getting hurt when you're invincible.
+    IEnumerator hurtBufferPeriod(float waitTime) {
+        invincible = true;
+        yield return new WaitForSeconds(waitTime);
+        invincible = false;
+    }
+
+    
 }
