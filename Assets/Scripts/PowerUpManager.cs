@@ -164,7 +164,7 @@ public class PowerUpManager : MonoBehaviour {
             lettuce_enabled = true;
         }
 
-        if(Input.mouseScrollDelta.y > 0f)
+        if(Input.mouseScrollDelta.y > 0f || Input.GetKeyDown(KeyCode.JoystickButton5))
         {
             Reset_PowerUps();
             if (powerup_num < 4)
@@ -172,13 +172,15 @@ public class PowerUpManager : MonoBehaviour {
             Debug.Log(powerup_num);
         }
 
-        if (Input.mouseScrollDelta.y < 0f)
+        if (Input.mouseScrollDelta.y < 0f || Input.GetKeyDown(KeyCode.JoystickButton4))
         {
             Reset_PowerUps();
             if (powerup_num > 1)
                 powerup_num--;
             Debug.Log(powerup_num);
         }
+
+
     }
 
 
