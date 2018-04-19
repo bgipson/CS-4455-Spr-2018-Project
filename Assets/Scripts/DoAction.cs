@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DoAction : MonoBehaviour
 {
-
+    public bool shield_on;
     public GameObject Start_position;
     public Rigidbody bullet;
     public float power;
@@ -12,22 +13,25 @@ public class DoAction : MonoBehaviour
     Animator animator;
     public ParticleSystem particle;
     //float time = 0f;
+    bool tomatoIgnore;
 
     void Start()
     {
-        power = 30f;
+        tomatoIgnore = false;
+        power = 10f;
         animator = GetComponent<Animator>();
+        shield_on = false;
     }
     
     void Update()
     {
-        
-        if (Input.GetKey(KeyCode.Z)) //button pressed
+        //Debug.LogError("tomatoIgnore:" + tomatoIgnore);
+        if (Input.GetButton("Fire1")) //button pressed
         {
             if (Collectibles.pickle_acquired && powerUpManager.pickle_enabled) //pickle selected
             {
                 Debug.Log("Pressed");
-                if (power < 150f)
+                if (power < 80f)
                 {
                     power += 2f;
                 }
@@ -41,16 +45,18 @@ public class DoAction : MonoBehaviour
             {
                 //squish enabled
                 animator.SetBool("Squished", true);
+                Physics.IgnoreLayerCollision(0, 10);
             }
             else if (Collectibles.lettuce_acquired && powerUpManager.lettuce_enabled)
             {
                 //shield enabled
                 particle.gameObject.SetActive(true);
+                shield_on = true;
             }
 
         }
 
-        if (Input.GetKeyUp(KeyCode.Z)) //button let go
+        if (Input.GetButtonUp("Fire1")) //button let go
         {
             if (Collectibles.pickle_acquired && powerUpManager.pickle_enabled) //pickle selected
             {
@@ -60,26 +66,53 @@ public class DoAction : MonoBehaviour
             //{
             //    //super jump
             //}
-            else if (Collectibles.tomato_acquired && powerUpManager.tomato_enabled) //Collectibles.tomato_acquired && 
+            else if (Collectibles.tomato_acquired && powerUpManager.tomato_enabled && !tomatoIgnore) //Collectibles.tomato_acquired && 
             {
-                //squish disabled
-                animator.SetBool("Squished", false);
+                    //squish disabled
+                    animator.SetBool("Squished", false);
+                    Physics.IgnoreLayerCollision(0, 10, false);
             }
             else if (Collectibles.lettuce_acquired && powerUpManager.lettuce_enabled)
             {
                 //shield disabled
                 particle.gameObject.SetActive(false);
+                shield_on = false;
             }
         }
         
         
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "TomatoIgnore")
+        {
+            tomatoIgnore = true;
+        }
+        if (other.tag == "EndLevel")
+        {
+            SceneManager.LoadScene("Tutorial");
+            Collectibles.pickle_acquired = false;
+            Collectibles.cheese_acquired = false;
+            Collectibles.tomato_acquired = false;
+            Collectibles.lettuce_acquired = false;
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "TomatoIgnore")
+        {
+            tomatoIgnore = false;
+            animator.SetBool("Squished", false);
+        }
+    }
+
     public void Shooting()
     {
         Rigidbody instantiated_projectile = Instantiate(bullet, Start_position.transform.position, Start_position.transform.rotation);
         instantiated_projectile.AddForce(Start_position.transform.forward * power/10 + new Vector3(0f, 5f/10, 0f), ForceMode.Impulse);
-        power = 30f;
+        power = 10f;
        
     }
     

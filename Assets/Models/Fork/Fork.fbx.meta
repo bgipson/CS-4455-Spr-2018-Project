@@ -1,0 +1,176 @@
+fileFormatVersion: 2
+guid: 9e4e7acb983bd4f448de8ded61c44e85
+timeCreated: 1523480307
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Camera
+    100002: Cube
+    100004: //RootNode
+    100006: Lamp
+    100008: Armature
+    100010: Bone.001
+    100012: Bone.002
+    100014: Bone.003
+    100016: Bone.004
+    100018: Bone.005
+    100020: Bone.006
+    100022: Bone.007
+    100024: Bone.007_end
+    100026: Bone.008
+    100028: Bone.009
+    100030: Bone.009_end
+    100032: Bone.010
+    100034: Bone.011
+    100036: Bone.011_end
+    100038: BottomBone
+    100040: EyeBrowLeft
+    100042: EyeBrowRight
+    100044: EyeLeft
+    100046: EyeLeft.001
+    100048: EyeRight
+    100050: EyeRight.001
+    100052: Forkie
+    400000: Camera
+    400002: Cube
+    400004: //RootNode
+    400006: Lamp
+    400008: Armature
+    400010: Bone.001
+    400012: Bone.002
+    400014: Bone.003
+    400016: Bone.004
+    400018: Bone.005
+    400020: Bone.006
+    400022: Bone.007
+    400024: Bone.007_end
+    400026: Bone.008
+    400028: Bone.009
+    400030: Bone.009_end
+    400032: Bone.010
+    400034: Bone.011
+    400036: Bone.011_end
+    400038: BottomBone
+    400040: EyeBrowLeft
+    400042: EyeBrowRight
+    400044: EyeLeft
+    400046: EyeLeft.001
+    400048: EyeRight
+    400050: EyeRight.001
+    400052: Forkie
+    2000000: Camera
+    2100000: Material
+    2300000: Cube
+    2300002: EyeBrowLeft
+    2300004: EyeBrowRight
+    2300006: EyeLeft
+    2300008: EyeLeft.001
+    2300010: EyeRight
+    2300012: EyeRight.001
+    2300014: Forkie
+    3300000: Cube
+    3300002: EyeBrowLeft
+    3300004: EyeBrowRight
+    3300006: EyeLeft
+    3300008: EyeLeft.001
+    3300010: EyeRight
+    3300012: EyeRight.001
+    3300014: Forkie
+    4300000: Cube
+    4300002: Forkie
+    4300004: EyeLeft
+    4300006: EyeBrowLeft
+    4300008: EyeLeft.001
+    4300010: EyeRight
+    4300012: EyeBrowRight
+    4300014: EyeRight.001
+    9500000: //RootNode
+    10800000: Lamp
+    13700000: EyeBrowLeft
+    13700002: EyeBrowRight
+    13700004: EyeLeft
+    13700006: EyeLeft.001
+    13700008: EyeRight
+    13700010: EyeRight.001
+    13700012: Forkie
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

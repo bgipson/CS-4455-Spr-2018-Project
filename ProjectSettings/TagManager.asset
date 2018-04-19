@@ -9,6 +9,9 @@ TagManager:
   - Lettuce
   - Pickle
   - BgMusic
+  - TomatoIgnore
+  - EndLevel
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -20,9 +23,9 @@ TagManager:
   - 
   - Ground
   - Burg
-  - 
-  - 
-  - 
+  - TomatoIgnoreLayer
+  - IgnoreBurgie
+  - InvisWall
   - 
   - 
   - 

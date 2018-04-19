@@ -81,7 +81,7 @@ public class PowerUpManager : MonoBehaviour {
             Debug.Log(shoot.power);
             PowerupIndicator.texture = PowerupSprites[0];
             ProgressBar.SetActive(true);
-            dynamicProgressBar.GetComponent<Image>().fillAmount = (shoot.power - 30f) / 120f;
+            dynamicProgressBar.GetComponent<Image>().fillAmount = (shoot.power - 10f) / 70f;
         }
 
         else if (cheese_enabled)
@@ -164,7 +164,7 @@ public class PowerUpManager : MonoBehaviour {
             lettuce_enabled = true;
         }
 
-        if(Input.mouseScrollDelta.y > 0f)
+        if(Input.mouseScrollDelta.y > 0f || Input.GetKeyDown(KeyCode.JoystickButton5))
         {
             Reset_PowerUps();
             if (powerup_num < 4)
@@ -172,13 +172,15 @@ public class PowerUpManager : MonoBehaviour {
             Debug.Log(powerup_num);
         }
 
-        if (Input.mouseScrollDelta.y < 0f)
+        if (Input.mouseScrollDelta.y < 0f || Input.GetKeyDown(KeyCode.JoystickButton4))
         {
             Reset_PowerUps();
             if (powerup_num > 1)
                 powerup_num--;
             Debug.Log(powerup_num);
         }
+
+
     }
 
 
