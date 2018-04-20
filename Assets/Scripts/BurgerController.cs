@@ -12,20 +12,23 @@ using UnityEngine.SceneManagement;
 /// 5. Hurt Animation
 /// </summary>
 public class BurgerController : MonoBehaviour {
-    DoAction doAction;
-    PowerUpManager powerUpManager;
+    public DoAction doAction;
+    public PowerUpManager powerUpManager;
     Animator animator;
     Rigidbody rig;
+    public HealthUIManager healthUIManager;
     public GameObject raycastPoint;
     Collectibles manager;
-    int health = 3;
+    public int health = 3;
 
     public bool joystick = false;
     float airVelocity = 0f;
 
-    bool invincible = false;
+    public bool invincible = false;
 
     void Start () {
+
+        doAction = GetComponent<DoAction>();
         animator = GetComponent<Animator>();
         rig = GetComponent<Rigidbody>();
         airVelocity = 0;
@@ -192,7 +195,10 @@ public class BurgerController : MonoBehaviour {
 
 
     void OnTriggerStay(Collider other) {
-        if (!invincible && other.gameObject.tag == "Enemy") {
+
+
+
+        if (!invincible && other.gameObject.tag == "Enemy" && doAction.shield_on == false) {
             health -= 1;
             if (health <= 0) {
                 animator.SetBool("Dead", true);
