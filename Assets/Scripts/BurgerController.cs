@@ -214,7 +214,32 @@ public class BurgerController : MonoBehaviour {
             }
             
         }
+
+        if (!invincible && other.gameObject.tag == "Fire" && doAction.shield_on == false)
+        {
+
+            health -= 1;
+            if (health <= 0)
+            {
+                animator.SetBool("Dead", true);
+                invincible = true;
+                ScreenTransition transition = FindObjectOfType<ScreenTransition>();
+                if (transition)
+                {
+                    transition.fadeInToLevel(SceneManager.GetActiveScene().buildIndex);
+                }
+                rig.constraints = RigidbodyConstraints.FreezeAll;
+            }
+            else
+            {
+                animator.SetBool("Damage", true);
+                StartCoroutine(hurtBufferPeriod(1.3f));
+            }
+
+        }
     }
+
+    
 
     //Buffer period between getting hurt when you're invincible.
     IEnumerator hurtBufferPeriod(float waitTime) {

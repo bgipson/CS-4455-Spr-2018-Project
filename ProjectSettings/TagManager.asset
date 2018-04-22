@@ -12,6 +12,7 @@ TagManager:
   - TomatoIgnore
   - EndLevel
   - Enemy
+  - Fire
   layers:
   - Default
   - TransparentFX
@@ -26,8 +27,8 @@ TagManager:
   - TomatoIgnoreLayer
   - IgnoreBurgie
   - InvisWall
-  - 
-  - 
+  - Fire
+  - Player
   - 
   - 
   - 
