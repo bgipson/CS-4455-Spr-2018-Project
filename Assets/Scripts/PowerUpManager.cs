@@ -78,7 +78,7 @@ public class PowerUpManager : MonoBehaviour {
 
         if (pickle_enabled)
         {
-            Debug.Log(shoot.power);
+            //Debug.Log(shoot.power);
             PowerupIndicator.texture = PowerupSprites[0];
             ProgressBar.SetActive(true);
             dynamicProgressBar.GetComponent<Image>().fillAmount = (shoot.power - 10f) / 70f;

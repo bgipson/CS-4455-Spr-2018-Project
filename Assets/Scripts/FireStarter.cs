@@ -41,14 +41,14 @@ public class FireStarter : MonoBehaviour {
         if (timer == 0f)
         {
             random = Random.Range(1, 5);
-            Debug.Log(random);
+            //Debug.Log(random);
         }
         timer = timer + Time.deltaTime;
     }
 
     void Alternate1()
     {
-        Debug.Log("Alternate1");
+        //Debug.Log("Alternate1");
         Fire[0].SetActive(true);
         Fire[1].SetActive(false);
         Fire[2].SetActive(false);
@@ -56,7 +56,7 @@ public class FireStarter : MonoBehaviour {
     }
     void Alternate2()
     {
-        Debug.Log("Alternate2");
+        //Debug.Log("Alternate2");
         Fire[0].SetActive(false);
         Fire[1].SetActive(true);
         Fire[2].SetActive(false);
@@ -64,7 +64,7 @@ public class FireStarter : MonoBehaviour {
     }
     void Alternate3()
     {
-        Debug.Log("Alternate3");
+        //Debug.Log("Alternate3");
         Fire[0].SetActive(false);
         Fire[1].SetActive(false);
         Fire[2].SetActive(true);
@@ -72,7 +72,7 @@ public class FireStarter : MonoBehaviour {
     }
     void Alternate4()
     {
-        Debug.Log("Alternate4");
+        //Debug.Log("Alternate4");
         Fire[0].SetActive(false);
         Fire[1].SetActive(false);
         Fire[2].SetActive(false);

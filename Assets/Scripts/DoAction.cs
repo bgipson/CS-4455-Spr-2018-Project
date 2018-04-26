@@ -45,7 +45,7 @@ public class DoAction : MonoBehaviour
             {
                 //squish enabled
                 animator.SetBool("Squished", true);
-                Physics.IgnoreLayerCollision(0, 10);
+                Physics.IgnoreLayerCollision(14, 10);
             }
             else if (Collectibles.lettuce_acquired && powerUpManager.lettuce_enabled)
             {
@@ -70,7 +70,7 @@ public class DoAction : MonoBehaviour
             {
                     //squish disabled
                     animator.SetBool("Squished", false);
-                    Physics.IgnoreLayerCollision(0, 10, false);
+                    Physics.IgnoreLayerCollision(14, 10, false);
             }
             else if (Collectibles.lettuce_acquired && powerUpManager.lettuce_enabled)
             {
@@ -85,8 +85,10 @@ public class DoAction : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        //Debug.LogError(other.transform.position.y);
         if (other.tag == "TomatoIgnore")
         {
+            //Debug.LogError("ignore: " + other.transform.position.y);
             tomatoIgnore = true;
         }
         if (other.tag == "EndLevel")
