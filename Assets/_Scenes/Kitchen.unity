@@ -20790,7 +20790,8 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114456632516470696, guid: e7da6fabb76afe74490b526a24411115, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e7da6fabb76afe74490b526a24411115, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1034305949 stripped
