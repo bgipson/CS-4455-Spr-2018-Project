@@ -8,7 +8,7 @@ public class changeLayer : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        Debug.LogError(this.transform.position.y);
+        //Debug.LogError(this.transform.position.y);
         if (this.transform.position.y <= ymin) {
             this.gameObject.layer = LayerMask.NameToLayer("Default");
         }
