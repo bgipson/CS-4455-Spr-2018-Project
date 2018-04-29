@@ -18,6 +18,7 @@ public class BurgerController : MonoBehaviour {
     Rigidbody rig;
     public HealthUIManager healthUIManager;
     public GameObject raycastPoint;
+    public GroundCheck groundCheck;
     Collectibles manager;
     public int health = 3;
 
@@ -51,13 +52,17 @@ public class BurgerController : MonoBehaviour {
         cheese.SetActive(manager.getCheese());
         tomato.SetActive(manager.getTomato());
         lettuce.SetActive(manager.getLettuce());
+        if (!FindObjectOfType<PowerUpManager>().tomato_enabled) {
+            animator.SetBool("Squished", false);
+        }
     }
     //Checks if there is solid ground under
     void checkGround() {
         Ray ray = new Ray(raycastPoint.transform.position, Vector3.down);
         RaycastHit hit;
         //bool grounded = Physics.Raycast(ray, out hit, 2f, 1 << 8);
-         bool grounded = Physics.Raycast(ray, out hit, 2f);
+        //bool grounded = Physics.Raycast(ray, out hit, 2f);
+        bool grounded = groundCheck.check;
         animator.SetBool("Grounded", grounded);
         animator.applyRootMotion = true;
     }
@@ -84,7 +89,8 @@ public class BurgerController : MonoBehaviour {
             joystick = false;
         }
         if (Input.GetKey(KeyCode.LeftArrow)) {
-            rig.angularVelocity = new Vector3(rig.angularVelocity.x, -4, 0);
+            transform.Rotate(new Vector3(0, -5f, 0));
+            //rig.angularVelocity = new Vector3(rig.angularVelocity.x, -4, 0);
             animator.SetBool("Turning", true);
             joystick = false;
         } else if (Input.GetKeyUp(KeyCode.LeftArrow)) {
@@ -95,7 +101,8 @@ public class BurgerController : MonoBehaviour {
         }
 
         if (Input.GetKey(KeyCode.RightArrow)) {
-            rig.angularVelocity = new Vector3(rig.angularVelocity.x, 4, 0);
+            transform.Rotate(new Vector3(0, 5f, 0));
+            //rig.angularVelocity = new Vector3(rig.angularVelocity.x, 4, 0);
             joystick = false;
             animator.SetBool("Turning", true);
             //transform.Rotate(0, 4, 0);
@@ -106,14 +113,6 @@ public class BurgerController : MonoBehaviour {
             animator.SetBool("Turning", false);
         }
 
-        //if (Input.GetKeyDown(KeyCode.Space)) {
-        //    animator.SetBool("HighJump", true);
-        //    joystick = false;
-        //}
-
-        //if (Input.GetKeyDown(KeyCode.Z)) {
-        //    animator.SetBool("Shoot", true);
-        //}
         animator.SetBool("Fast", Input.GetKey(KeyCode.LeftShift));
         
         

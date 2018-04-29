@@ -6,7 +6,6 @@ public class CameraFollow : MonoBehaviour
 {
     public Transform target;            // The position that that camera will be following.
     public float smoothing = 5f;        // The speed with which the camera will be following.
-    public GameObject rotationPoint;
 
     Vector3 offset;                     // The initial offset from the target.
 
@@ -21,16 +20,7 @@ public class CameraFollow : MonoBehaviour
         // Create a postion the camera is aiming for based on the offset from the target.
         Vector3 targetCamPos = target.position + offset;
 
-        
-
-        if (rotationPoint)
-        {
-            transform.position = Vector3.Lerp(transform.position, rotationPoint.transform.position, smoothing * Time.deltaTime);
-            transform.rotation = Quaternion.Slerp(transform.rotation, rotationPoint.transform.rotation, smoothing * Time.deltaTime);
-        } else
-        {
-            // Smoothly interpolate between the camera's current position and it's target position.
-            transform.position = Vector3.Lerp(transform.position, targetCamPos, smoothing * Time.deltaTime);
-        }
+        // Smoothly interpolate between the camera's current position and it's target position.
+        transform.position = Vector3.Lerp(transform.position, targetCamPos, smoothing * Time.deltaTime);
     }
 }
