@@ -169,7 +169,7 @@ public class PowerUpManager : MonoBehaviour {
             Reset_PowerUps();
             if (powerup_num < 4)
                 powerup_num++;
-            Debug.Log(powerup_num);
+            //Debug.Log(powerup_num);
         }
 
         if (Input.mouseScrollDelta.y < 0f || Input.GetKeyDown(KeyCode.JoystickButton4))
@@ -177,7 +177,7 @@ public class PowerUpManager : MonoBehaviour {
             Reset_PowerUps();
             if (powerup_num > 1)
                 powerup_num--;
-            Debug.Log(powerup_num);
+            //Debug.Log(powerup_num);
         }
 
 
