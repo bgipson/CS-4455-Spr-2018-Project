@@ -244,8 +244,8 @@ MonoBehaviour:
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 'Programmers
 
@@ -257,7 +257,24 @@ MonoBehaviour:
     Animations
 
 
-    Background Music'
+    Level Design
+
+
+
+    Logo
+
+
+    AI
+
+
+
+    Environment
+
+
+    Background Music
+
+
+    Other Resources'
 --- !u!222 &469229598
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -566,24 +583,13 @@ MonoBehaviour:
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Brandon Gipson
-
-    Anna Greene
-
-    Tori Gumtow
-
-    Corey Salmon
-
-    Ambuz Vimal
-
-
-    Brandon Gipson
-
-
-    Adam Thomas'
+  m_Text: "Brandon Gipson\nAnna Greene\nTori Gumtow\nCorey Salmon\nAmbuz Vimal\n\nBrandon
+    Gipson\n\nAnna Greene\nTori Gumtow\n\nAnna Greene\n\nBrandon Gipson\nAmbuz Vimal\n\nCorey
+    Salmon\n\nAdam Thomas\n\nUnity Asset Store\n\tKitchen Creation Kit\n\nFreeSound.org\n\tShort
+    Crunchy Splat\n\tSpit Toothpaste\n"
 --- !u!222 &1005705378
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -785,8 +791,8 @@ MonoBehaviour:
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: CREDITS
 --- !u!222 &1728573591
