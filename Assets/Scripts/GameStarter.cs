@@ -10,6 +10,12 @@ public class GameStarter : MonoBehaviour {
         SceneManager.LoadScene("Tutorial");
     }
 
+    public void RestartLevel()
+    {
+        Debug.LogError("testing");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     // //Load scene by index
     //public void LoadByIndex(int sceneIndex)
     //{

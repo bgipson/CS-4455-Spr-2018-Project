@@ -3865,6 +3865,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1425792790}
   smoothing: 5
+  rotationPoint: {fileID: 0}
 --- !u!1 &1058210975
 GameObject:
   m_ObjectHideFlags: 0
@@ -6681,7 +6682,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1810245343}
-        m_MethodName: StartGame
+        m_MethodName: RestartLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
