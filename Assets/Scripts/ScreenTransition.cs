@@ -8,6 +8,7 @@ public class ScreenTransition : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         animator = GetComponent<Animator>();
+        Time.timeScale = 1f;
 	}
 	
 	// Update is called once per frame
@@ -17,6 +18,7 @@ public class ScreenTransition : MonoBehaviour {
 
     public void fadeIn() {
         animator.SetTrigger("FadeIn");
+        print("FADING IN");
     }
 
     public void fadeInToLevel(int level) {
@@ -31,5 +33,6 @@ public class ScreenTransition : MonoBehaviour {
 
     public void fadeOut() {
         animator.SetTrigger("FadeOut");
+        print("FADE OUT");
     }
 }
