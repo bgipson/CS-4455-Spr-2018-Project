@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameStarter : MonoBehaviour {
+    public class GameStarter : MonoBehaviour {
 
     public void StartGame()
     {
@@ -14,6 +14,14 @@ public class GameStarter : MonoBehaviour {
     {
         Debug.LogError("testing");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void LoadControlsFromPause()
+    {
+        //canvasGroup.interactable = true;
+        //canvasGroup.blocksRaycasts = true;
+        //canvasGroup.alpha = 1f;
+        //Time.timeScale = 0f;
     }
 
     // //Load scene by index
