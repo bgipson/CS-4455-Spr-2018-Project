@@ -93,7 +93,7 @@ public class DoAction : MonoBehaviour
         }
         if (other.tag == "EndLevel")
         {
-            SceneManager.LoadScene("Tutorial");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             Collectibles.pickle_acquired = false;
             Collectibles.cheese_acquired = false;
             Collectibles.tomato_acquired = false;

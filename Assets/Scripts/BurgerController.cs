@@ -34,8 +34,11 @@ public class BurgerController : MonoBehaviour {
         rig = GetComponent<Rigidbody>();
         airVelocity = 0;
         manager = FindObjectOfType<Collectibles>();
-        
-	}
+        Collectibles.pickle_acquired = false;
+        Collectibles.cheese_acquired = false;
+        Collectibles.tomato_acquired = false;
+        Collectibles.lettuce_acquired = false;
+    }
 	
 	// Update is called once per frame
 	void Update () {

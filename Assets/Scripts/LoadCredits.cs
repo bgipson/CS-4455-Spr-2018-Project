@@ -9,4 +9,9 @@ public class LoadCredits : MonoBehaviour {
     {
         SceneManager.LoadScene("Credits");
     }
+
+    public void LoadControls()
+    {
+        SceneManager.LoadScene("Controls");
+    }
 }
