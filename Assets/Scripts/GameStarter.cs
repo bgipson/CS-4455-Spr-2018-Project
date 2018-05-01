@@ -12,7 +12,6 @@ using UnityEngine.SceneManagement;
 
     public void RestartLevel()
     {
-        Debug.LogError("testing");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
