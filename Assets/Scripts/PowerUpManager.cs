@@ -11,76 +11,44 @@ public class PowerUpManager : MonoBehaviour {
     public ParticleSystem particle;
     public List<Texture> PowerupSprites;
     public RawImage PowerupIndicator;
+    public RawImage PowerupIndicator2;
+    public RawImage PowerupIndicator3;
+    public RawImage PowerupIndicator4;
     public GameObject ProgressBar;
     public GameObject dynamicProgressBar;
     public DoAction shoot;
     private Transform progressbarimage;
-    public  bool pickle_enabled;
-    public  bool cheese_enabled;
-    public  bool tomato_enabled;
-    public  bool lettuce_enabled;
-    public  bool default_enabled;
+    public bool pickle_enabled;
+    public bool cheese_enabled;
+    public bool tomato_enabled;
+    public bool lettuce_enabled;
+    public bool default_enabled;
+    public RawImage BG1;
+    public RawImage BG2;
+    public RawImage BG3;
+    public RawImage BG4;
 
 
-    //public enum Powerup
-    //{
-    //    Default,
-    //    Pickle,
-    //    Cheese,
-    //    Tomato,
-    //    Lettuce
-    //}
-    //public Powerup powerup;
-
-	void Start() {
+    void Start() {
         //powerup = Powerup.Default;
         default_enabled = true;
         powerup_num = 0;
-	}
+    }
 
-	void Update() {
+    void Update() {
         ReadInput();
-        //if (pickle_enabled) //powerup == Powerup.Pickle)
-        //    transform.GetComponent<Shoot>().enabled = true;
-        //else
-        //    transform.GetComponent<Shoot>().enabled = false;
-
-        //switch(powerup)
-        //{
-        //    case Powerup.Pickle:
-        //        PowerupIndicator.texture = PowerupSprites[0];
-        //        ProgressBar.SetActive(true);
-        //        dynamicProgressBar.GetComponent<Image>().fillAmount = (shoot.power - 30f)/120f;
-        //        pickle_enabled = true;
-        //        break;
-        //    case Powerup.Cheese:
-        //        ProgressBar.SetActive(false);
-        //        PowerupIndicator.texture = PowerupSprites[1];
-        //        cheese_enabled = true;
-        //        break;
-        //    case Powerup.Tomato:
-        //        ProgressBar.SetActive(false);
-        //        PowerupIndicator.texture = PowerupSprites[2];
-        //        tomato_enabled = true;
-        //        break;
-        //    case Powerup.Lettuce:
-        //        ProgressBar.SetActive(false);
-        //        PowerupIndicator.texture = PowerupSprites[3];
-        //        lettuce_enabled = true;
-        //        break;
-        //    case Powerup.Default:
-        //        ProgressBar.SetActive(false);
-        //        PowerupIndicator.texture = PowerupSprites[4];
-        //        break;
-        //}
 
         Decode_Powerups();
 
         if (pickle_enabled)
         {
             //Debug.Log(shoot.power);
-            PowerupIndicator.texture = PowerupSprites[0];
+            //PowerupIndicator.texture = PowerupSprites[0];
             ProgressBar.SetActive(true);
+            BG1.gameObject.SetActive(true);
+            BG2.gameObject.SetActive(false);
+            BG3.gameObject.SetActive(false);
+            BG4.gameObject.SetActive(false);
             if (Collectibles.pickle_acquired)
             {
                 dynamicProgressBar.GetComponent<Image>().fillAmount = (shoot.power - 10f) / 70f;
@@ -90,27 +58,55 @@ public class PowerUpManager : MonoBehaviour {
         else if (cheese_enabled)
         {
             ProgressBar.SetActive(false);
-            PowerupIndicator.texture = PowerupSprites[1];
+            BG1.gameObject.SetActive(false);
+            BG2.gameObject.SetActive(true);
+            BG3.gameObject.SetActive(false);
+            BG4.gameObject.SetActive(false);
         }
 
         else if (tomato_enabled)
         {
             ProgressBar.SetActive(false);
-            PowerupIndicator.texture = PowerupSprites[2];
+            BG1.gameObject.SetActive(false);
+            BG2.gameObject.SetActive(false);
+            BG3.gameObject.SetActive(true);
+            BG4.gameObject.SetActive(false);
         }
         else if (lettuce_enabled)
         {
             ProgressBar.SetActive(false);
-            PowerupIndicator.texture = PowerupSprites[3];
-           
+            BG1.gameObject.SetActive(false);
+            BG2.gameObject.SetActive(false);
+            BG3.gameObject.SetActive(false);
+            BG4.gameObject.SetActive(true);
+
         }
         else if (default_enabled)
         {
             ProgressBar.SetActive(false);
-            PowerupIndicator.texture = PowerupSprites[4];
+            BG1.gameObject.SetActive(true);
         }
-        
+
+        if (Collectibles.pickle_acquired)
+        {
+            if (PowerupIndicator.texture != PowerupSprites[0]) PowerupIndicator.texture = PowerupSprites[0];
+        }
+        if (Collectibles.cheese_acquired)
+        {
+            if (PowerupIndicator2.texture != PowerupSprites[1]) PowerupIndicator2.texture = PowerupSprites[1];
+        }
+        if (Collectibles.tomato_acquired)
+        {
+            if (PowerupIndicator3.texture != PowerupSprites[2]) PowerupIndicator3.texture = PowerupSprites[2];
+        }
+        if (Collectibles.lettuce_acquired)
+        {
+            if (PowerupIndicator4.texture != PowerupSprites[3]) PowerupIndicator4.texture = PowerupSprites[3];
+        }
+
     }
+
+
 
     private void Decode_Powerups()
     {

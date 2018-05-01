@@ -5,6 +5,7 @@ using UnityEngine;
 public class Collectibles : MonoBehaviour {
 
     public GameObject pickle;
+    public PowerUpManager powerUpManager;
 
     public static string collisionObj;
 
@@ -47,18 +48,19 @@ public class Collectibles : MonoBehaviour {
             Destroy(collision.gameObject);
         }
 
-        if (collision.gameObject.transform.tag == "Tomato")
-        {
-            tomato_acquired = true;
-            collisionObj = "Tomato";
-            Destroy(collision.gameObject);
-        }
-
         if (collision.gameObject.transform.tag == "Cheese")
         {
             cheese_acquired = true;
             collisionObj = "Cheese";
             Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.transform.tag == "Tomato")
+        {
+            tomato_acquired = true;
+            collisionObj = "Tomato";
+            Destroy(collision.gameObject);
+            
         }
 
         if (collision.gameObject.transform.tag == "Lettuce")
