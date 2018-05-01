@@ -112,11 +112,25 @@ public class DialogueManager : MonoBehaviour {
 
         foreach (string sentence in dialogue.sentences)
         {
-			if (sentence == "") {
-				Debug.Log (Input.GetJoystickNames ().Length);
-				//sentences.Enqueue (Input.GetJoystickNames());
-			} else {
-				sentences.Enqueue (sentence);
+			if (Input.GetJoystickNames ().Length == 0) {
+				if (sentence.Length == 1) {
+					sentences.Enqueue ("Press '" + sentence + "' or scroll to toggle to your new power!");
+				} else if (sentence.Length == 9 || sentence.Length == 6 || sentence.Length == 5) {
+					sentences.Enqueue ("Press 'Z' to " + sentence + "!");
+				} else {
+					Debug.Log (sentence.Length);
+					sentences.Enqueue (sentence);
+				}
+			} 
+			else if (Input.GetJoystickNames().Length == 1) {
+				if (sentence.Length == 1) {
+					sentences.Enqueue ("Press LB/RB to toggle to your new power!");
+				} else if (sentence.Length == 9 || sentence.Length == 6 || sentence.Length == 5) {
+					sentences.Enqueue ("Press 'X' to " + sentence + "!");
+				} else {
+					Debug.Log (sentence.Length);
+					sentences.Enqueue (sentence);
+				}
 			}
         }
         DisplayNextSentence();
