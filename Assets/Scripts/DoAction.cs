@@ -15,6 +15,7 @@ public class DoAction : MonoBehaviour
     //float time = 0f;
     bool tomatoIgnore;
 	public AudioSource shootSound;
+	public AudioSource shieldSound;
 
     void Start()
     {
@@ -52,6 +53,8 @@ public class DoAction : MonoBehaviour
             {
                 //shield enabled
                 particle.gameObject.SetActive(true);
+				shieldSound.Play ();
+				shieldSound.loop = true;
                 shield_on = true;
             }
 
@@ -77,6 +80,7 @@ public class DoAction : MonoBehaviour
             {
                 //shield disabled
                 particle.gameObject.SetActive(false);
+				shieldSound.Stop();
                 shield_on = false;
             }
         }
