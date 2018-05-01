@@ -4,23 +4,58 @@ using UnityEngine;
 
 public class Missile : MonoBehaviour {
 
-    public Transform Target;
-    public float speed = 5f;
-    public float rotateSpeed = 200f;
+    
+    public float speed;
     private Rigidbody rb;
+    private Transform Target;
 
+    
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        speed = 50f;
     }
 
     private void FixedUpdate()
     {
-        Vector3 direction = Target.transform.position - rb.position;
-        direction.Normalize();
-        float rotateAmount = Vector3.Cross(direction, transform.up).z;
-        rb.angularVelocity = new Vector3(0, 0, rotateAmount * rotateSpeed);
-        rb.velocity = transform.up * speed;
+       if(Target == null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Vector3 dir = Target.position - transform.position;
+        float distanceThisFrame = speed * Time.deltaTime;
+
+        if(dir.magnitude <= distanceThisFrame)
+        {
+            HitTarget();
+            return;
+        }
+
+        transform.Translate(dir.normalized * distanceThisFrame, Space.World);
+        
+
     }
+
+    void HitTarget()
+    {
+        Destroy(gameObject);
+    }
+
+    public void Seek(Transform _target)
+        {
+        Target = _target;
+        }
+
+
+    
+
+    //IEnumerator Example()
+    //{
+    //    print(Time.time);
+    //    yield return new WaitForSeconds(5);
+    //    print(Time.time);
+    //}
 
 }
