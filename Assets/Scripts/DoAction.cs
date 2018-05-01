@@ -14,6 +14,7 @@ public class DoAction : MonoBehaviour
     public ParticleSystem particle;
     //float time = 0f;
     bool tomatoIgnore;
+	public AudioSource shootSound;
 
     void Start()
     {
@@ -161,6 +162,8 @@ public class DoAction : MonoBehaviour
     {
         Rigidbody instantiated_projectile = Instantiate(bullet, Start_position.transform.position, Start_position.transform.rotation);
 		instantiated_projectile.gameObject.SetActive (true);
+		shootSound.Play ();
+
 		instantiated_projectile.AddForce(Start_position.transform.forward * power/10 + new Vector3(0f, 5f/10, 0f), ForceMode.Impulse);
         power = 10f;
 
