@@ -574,7 +574,9 @@ Prefab:
       propertyPath: dialogue.sentences.Array.data[1]
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114406724168216192, guid: c704f8f1bb2f3d8419d21f704ce66752, type: 2}
+    - {fileID: 114445660503802062, guid: c704f8f1bb2f3d8419d21f704ce66752, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c704f8f1bb2f3d8419d21f704ce66752, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &124641240

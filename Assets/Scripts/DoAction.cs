@@ -152,11 +152,22 @@ public class DoAction : MonoBehaviour
         }
     }
 
+	IEnumerator WaitAndDisable(Rigidbody rb) {
+		yield return new WaitForSeconds (5);
+		rb.gameObject.SetActive (false);
+	}
+
     public void Shooting()
     {
         Rigidbody instantiated_projectile = Instantiate(bullet, Start_position.transform.position, Start_position.transform.rotation);
-        instantiated_projectile.AddForce(Start_position.transform.forward * power/10 + new Vector3(0f, 5f/10, 0f), ForceMode.Impulse);
+		instantiated_projectile.gameObject.SetActive (true);
+		instantiated_projectile.AddForce(Start_position.transform.forward * power/10 + new Vector3(0f, 5f/10, 0f), ForceMode.Impulse);
         power = 10f;
+
+		StartCoroutine (WaitAndDisable (instantiated_projectile));
+		//instantiated_projectile.gameObject.SetActive (false);
+		//bullet.gameObject.SetActive (false);
+
        
     }
     
