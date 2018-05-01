@@ -12,8 +12,10 @@ public class FOV_AI : MonoBehaviour {
     public GameObject projectile;
     public GameObject projectile_position;
     float count;
-    public GameObject missile;
+    //GameObject missile;
     private Rigidbody rb;
+    public float speed = 0.0001f;
+    private float Shoot_rate = 3f;
 
     private void Start()
     {
@@ -22,29 +24,43 @@ public class FOV_AI : MonoBehaviour {
         count = 0;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         IsinFOV = InFOV(transform, player, maxAngle, maxRadius);
         if(IsinFOV == true)
         {
+           // bool shooting;
             animator.enabled = false;
-            count += Time.deltaTime;
-            if(count > 3f)
+           
+           if(count <= 0f)
             {
                 Shoot();
-                count = 0;
+                count = 1f*Shoot_rate;
             }
+
+            count -= Time.deltaTime;
+
         }
         else
         {
             animator.enabled = true;
+            //count = 0;
         }
 
     }
 
+    
+
     void Shoot()
     {
-        missile = Instantiate(projectile, projectile_position.transform);
+        GameObject missile = (GameObject)Instantiate(projectile, projectile_position.transform);
+        rb = missile.GetComponent<Rigidbody>();
+        Missile miss = missile.GetComponent<Missile>();
+        if(miss != null)
+        {
+            miss.Seek(player.transform);
+        }
+
     }
 
     private void OnDrawGizmos()

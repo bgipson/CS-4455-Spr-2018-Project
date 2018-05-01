@@ -726,7 +726,7 @@ MonoBehaviour:
   maxRadius: 21.6
   projectile: {fileID: 1092163542718018, guid: c31114be6d8ffda41a8e4f781d613839, type: 2}
   projectile_position: {fileID: 2093888956}
-  missile: {fileID: 0}
+  speed: 10
 --- !u!136 &817692933
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1563,61 +1563,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 543bf1db8a8f5544b8cb62dd0c28631a, type: 2}
---- !u!1001 &2032384743
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4595866688913860, guid: 205f86c5717691b4d931835a4f3deebb, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4595866688913860, guid: 205f86c5717691b4d931835a4f3deebb, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4595866688913860, guid: 205f86c5717691b4d931835a4f3deebb, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4595866688913860, guid: 205f86c5717691b4d931835a4f3deebb, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4595866688913860, guid: 205f86c5717691b4d931835a4f3deebb, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4595866688913860, guid: 205f86c5717691b4d931835a4f3deebb, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4595866688913860, guid: 205f86c5717691b4d931835a4f3deebb, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4595866688913860, guid: 205f86c5717691b4d931835a4f3deebb, type: 2}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 114176865391609528, guid: 205f86c5717691b4d931835a4f3deebb,
-        type: 2}
-      propertyPath: Target
-      value: 
-      objectReference: {fileID: 263416973}
-    - target: {fileID: 1386892976556750, guid: 205f86c5717691b4d931835a4f3deebb, type: 2}
-      propertyPath: m_Name
-      value: Missile 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1386892976556750, guid: 205f86c5717691b4d931835a4f3deebb, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 205f86c5717691b4d931835a4f3deebb, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &2093888956
 GameObject:
   m_ObjectHideFlags: 0
