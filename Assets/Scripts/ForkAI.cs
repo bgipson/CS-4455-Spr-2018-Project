@@ -12,7 +12,7 @@ public class ForkAI : MonoBehaviour {
 
     public Transform mainFork;
 
-    public Animator animator;
+    Animator animator;
     public bool movingToward = false;
     bool rotateToward = true;
 

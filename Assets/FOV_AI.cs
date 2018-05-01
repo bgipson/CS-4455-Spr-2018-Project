@@ -8,12 +8,43 @@ public class FOV_AI : MonoBehaviour {
     public float maxAngle;
     public float maxRadius;
     private bool IsinFOV;
+    Animator animator;
+    public GameObject projectile;
+    public GameObject projectile_position;
+    float count;
+    public GameObject missile;
+    private Rigidbody rb;
 
-    private void Update()
+    private void Start()
+    {
+        //rb = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
+        count = 0;
+    }
+
+    private void FixedUpdate()
     {
         IsinFOV = InFOV(transform, player, maxAngle, maxRadius);
-        
-        
+        if(IsinFOV == true)
+        {
+            animator.enabled = false;
+            count += Time.deltaTime;
+            if(count > 3f)
+            {
+                Shoot();
+                count = 0;
+            }
+        }
+        else
+        {
+            animator.enabled = true;
+        }
+
+    }
+
+    void Shoot()
+    {
+        missile = Instantiate(projectile, projectile_position.transform);
     }
 
     private void OnDrawGizmos()
