@@ -112,7 +112,12 @@ public class DialogueManager : MonoBehaviour {
 
         foreach (string sentence in dialogue.sentences)
         {
-            sentences.Enqueue(sentence);
+			if (sentence == "") {
+				Debug.Log (Input.GetJoystickNames ().Length);
+				//sentences.Enqueue (Input.GetJoystickNames());
+			} else {
+				sentences.Enqueue (sentence);
+			}
         }
         DisplayNextSentence();
         
