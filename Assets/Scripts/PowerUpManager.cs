@@ -81,7 +81,10 @@ public class PowerUpManager : MonoBehaviour {
             //Debug.Log(shoot.power);
             PowerupIndicator.texture = PowerupSprites[0];
             ProgressBar.SetActive(true);
-            dynamicProgressBar.GetComponent<Image>().fillAmount = (shoot.power - 10f) / 70f;
+            if (Collectibles.pickle_acquired)
+            {
+                dynamicProgressBar.GetComponent<Image>().fillAmount = (shoot.power - 10f) / 70f;
+            }
         }
 
         else if (cheese_enabled)

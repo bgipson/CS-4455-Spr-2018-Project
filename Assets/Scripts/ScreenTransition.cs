@@ -18,7 +18,7 @@ public class ScreenTransition : MonoBehaviour {
 
     public void fadeIn() {
         animator.SetTrigger("FadeIn");
-        print("FADING IN");
+        //print("FADING IN");
     }
 
     public void fadeInToLevel(int level) {

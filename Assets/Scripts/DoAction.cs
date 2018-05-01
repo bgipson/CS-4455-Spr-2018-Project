@@ -101,12 +101,54 @@ public class DoAction : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "SpecialPot")
+        {
+            //Debug.LogError("special pot");
+            Physics.IgnoreLayerCollision(14, 13, true);
+
+            //Debug.LogError(other.transform.position.x + "," + other.transform.position.y + ", " + other.transform.position.z);
+
+            if (other.transform.position.y < 85)
+            {
+                if (other.transform.position.x < -422 && other.transform.position.x > -445)
+                {
+                    if (other.transform.position.z > -778)
+                    {
+                        if (GameObject.Find("Burner1")) GameObject.Find("Burner1").SetActive(false);
+                    }
+                    if (other.transform.position.z < -772)
+                    {
+                        if (GameObject.Find("Burner2")) GameObject.Find("Burner2").SetActive(false);
+                    }
+                }
+                if (other.transform.position.x < -393 && other.transform.position.x > -414)
+                {
+                    if (other.transform.position.z > -772)
+                    {
+                        if (GameObject.Find("Burner3")) GameObject.Find("Burner3").SetActive(false);
+                    }
+                    if (other.transform.position.z < -765)
+                    {
+                        if (GameObject.Find("Burner4")) GameObject.Find("Burner4").SetActive(false);
+                    }
+                }
+            }
+        }
+    }
+
     void OnTriggerExit(Collider other)
     {
         if (other.tag == "TomatoIgnore")
         {
             tomatoIgnore = false;
             animator.SetBool("Squished", false);
+        }
+        if (other.tag == "SpecialPot")
+        {
+
+            Physics.IgnoreLayerCollision(14, 13, false);
         }
     }
 
