@@ -590,7 +590,8 @@ MonoBehaviour:
     Gipson\n\nAnna Greene\nTori Gumtow\n\nAnna Greene\n\nBrandon Gipson\nAmbuz Vimal\n\nCorey
     Salmon\n\nAdam Thomas\n\nUnity Asset Store\n\tKitchen Creation Kit\n\nFreeSound.org\n\tShort
     Crunchy Splat\n\tSpit Toothpaste\n\tSci-Fi Generator or Motor \n\t\tor Forcefield
-    Loop\n\tFunny Cartoon Walk\n\nSketchfab\n\tRestaurant Table\n"
+    Loop\n\tFunny Cartoon Walk\n\t50 Freesounds Vol. 1\n\tDeath.wav\n\tRpg sfx - item
+    jingle\t\n\nSketchfab\n\tRestaurant Table\n"
 --- !u!222 &1005705378
 CanvasRenderer:
   m_ObjectHideFlags: 0
