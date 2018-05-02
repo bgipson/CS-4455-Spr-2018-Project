@@ -72,28 +72,28 @@ public class DialogueManager : MonoBehaviour {
         {
             if (Collectibles.collisionObj == "Pickle")
             {
-                if (powerUpManager.pickle_enabled && Input.GetButton("Fire1"))   //Input.GetKey(KeyCode.Alpha1))
+                if (powerUpManager.pickle_enabled && (Input.GetButton("Fire1")||Input.GetButton("Fire2")))   //Input.GetKey(KeyCode.Alpha1))
                 {
                     DisplayNextSentence();
                 }
             }
             else if (Collectibles.collisionObj == "Cheese")
             {
-                if (powerUpManager.cheese_enabled && Input.GetButton("Fire1"))
+                if (powerUpManager.cheese_enabled && (Input.GetButton("Fire1") || Input.GetButton("Fire2")))
                 {
                     DisplayNextSentence();
                 }
             }
             else if (Collectibles.collisionObj == "Tomato")
             {
-                if (powerUpManager.tomato_enabled && Input.GetButton("Fire1"))
+                if (powerUpManager.tomato_enabled && (Input.GetButton("Fire1") || Input.GetButton("Fire2")))
                 {
                     DisplayNextSentence();
                 }
             }
             else if (Collectibles.collisionObj == "Lettuce")
             {
-                if (powerUpManager.lettuce_enabled && Input.GetButton("Fire1"))
+                if (powerUpManager.lettuce_enabled && (Input.GetButton("Fire1") || Input.GetButton("Fire2")))
                 {
                     DisplayNextSentence();
                 }
@@ -127,6 +127,7 @@ public class DialogueManager : MonoBehaviour {
 					sentences.Enqueue ("Press LB/RB to toggle to your new power!");
 				} else if (sentence.Length == 9 || sentence.Length == 6 || sentence.Length == 5) {
 					sentences.Enqueue ("Press 'X' to " + sentence + "!");
+                    //CHANGE THIS DEPENDING ON THE CONTROLLER AKG
 				} else {
 					Debug.Log (sentence.Length);
 					sentences.Enqueue (sentence);

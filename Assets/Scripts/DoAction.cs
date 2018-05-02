@@ -29,7 +29,7 @@ public class DoAction : MonoBehaviour
     void Update()
     {
         //Debug.LogError("tomatoIgnore:" + tomatoIgnore);
-        if (Input.GetButton("Fire1")) //button pressed
+        if (Input.GetButton("Fire1")||Input.GetButton("Fire2")) //button pressed
         {
             if (Collectibles.pickle_acquired && powerUpManager.pickle_enabled) //pickle selected
             {
@@ -65,7 +65,7 @@ public class DoAction : MonoBehaviour
 
         }
 
-        if (Input.GetButtonUp("Fire1")) //button let go
+        if (Input.GetButtonUp("Fire1")|| Input.GetButtonUp("Fire2")) //button let go
         {
             if (Collectibles.pickle_acquired && powerUpManager.pickle_enabled) //pickle selected
             {
