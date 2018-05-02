@@ -23,7 +23,7 @@ public class Float : MonoBehaviour {
 	void FixedUpdate () {
 		forceFactor = 1.0f - ((transform.position.y) - waterLevel)/floatThreshold;
 
-        if (forceFactor > 0f && isMounted == true)
+        if (forceFactor > 0f && isMounted == true && transform.position.z > -682f)
         {
             downForce = -122f;
             floatForce = -Physics.gravity * (forceFactor - rb.velocity.y * waterDensity);
@@ -32,15 +32,30 @@ public class Float : MonoBehaviour {
             transform.Translate(Vector3.forward * Time.deltaTime);
             burgie.transform.position = Anchor.position;
         }
-        
-        if (forceFactor > 0f && isMounted == false)
+
+        if (forceFactor > 0f && isMounted == true && transform.position.z < -682f)
+        {
+            downForce = -122f;
+            floatForce = -Physics.gravity * (forceFactor - rb.velocity.y * waterDensity);
+            floatForce += new Vector3(0f, -downForce, 0f);
+            rb.AddForceAtPosition(floatForce, transform.position);
+            //transform.Translate(Vector3.forward * Time.deltaTime);
+            //burgie.transform.position = Anchor.position;
+        }
+
+        if (forceFactor > 0f && isMounted == false && transform.position.z > -682f)
         {
             floatForce = -Physics.gravity *(forceFactor - rb.velocity.y * waterDensity);
             floatForce += new Vector3(0f, -downForce, 0f);
             rb.AddForceAtPosition(floatForce, transform.position);
             
         }
-	}
+        if (forceFactor > 0f && isMounted == false && transform.position.z < -682f)
+        {
+            transform.position = new Vector3(transform.position.x, 76.343f, transform.position.z);
+
+        }
+    }
 
 
     private void OnCollisionStay(Collision collision)
