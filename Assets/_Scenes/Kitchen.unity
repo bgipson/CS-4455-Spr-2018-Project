@@ -31064,6 +31064,92 @@ GameObject:
   m_PrefabParentObject: {fileID: 1998398560837912, guid: 1f265cecc31947841ac35dc51126f923,
     type: 2}
   m_PrefabInternal: {fileID: 1528462077}
+--- !u!114 &1041596654 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114039754906619776, guid: 1f265cecc31947841ac35dc51126f923,
+    type: 2}
+  m_PrefabInternal: {fileID: 1528462077}
+  m_Script: {fileID: 11500000, guid: 478d43580997274429d4105c306aa94b, type: 3}
+--- !u!82 &1041596662
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1041596653}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &1045844534 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: bf495eacf58e31146ab012aa89ac68da, type: 2}
@@ -44948,6 +45034,21 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
       objectReference: {fileID: 0}
+    - target: {fileID: 114039754906619776, guid: 1f265cecc31947841ac35dc51126f923,
+        type: 2}
+      propertyPath: shootSound
+      value: 
+      objectReference: {fileID: 1041596662}
+    - target: {fileID: 114039754906619776, guid: 1f265cecc31947841ac35dc51126f923,
+        type: 2}
+      propertyPath: shieldSound
+      value: 
+      objectReference: {fileID: 1041596662}
+    - target: {fileID: 114039754906619776, guid: 1f265cecc31947841ac35dc51126f923,
+        type: 2}
+      propertyPath: tomatoSound
+      value: 
+      objectReference: {fileID: 1041596662}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f265cecc31947841ac35dc51126f923, type: 2}
   m_IsPrefabParent: 0
@@ -56106,7 +56207,7 @@ MonoBehaviour:
   PowerupIndicator4: {fileID: 1418362682}
   ProgressBar: {fileID: 1647909617}
   dynamicProgressBar: {fileID: 1759426951}
-  shoot: {fileID: 0}
+  shoot: {fileID: 1041596654}
   pickle_enabled: 0
   cheese_enabled: 0
   tomato_enabled: 0
