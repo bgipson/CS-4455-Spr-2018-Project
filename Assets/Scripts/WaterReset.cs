@@ -29,7 +29,9 @@ public class WaterReset : MonoBehaviour {
     public void OnTriggerEnter(Collider other) {
         print("AY");
         if (other.gameObject.tag == "Player") {
-            StartCoroutine(resetPlayer(resetTime, other.gameObject));
+            if (other.gameObject.GetComponent<BurgerController>().health > 0) {
+                StartCoroutine(resetPlayer(resetTime, other.gameObject));
+            }
         }
     }
 }

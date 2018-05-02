@@ -49,7 +49,9 @@ public class DoAction : MonoBehaviour
                 //squish enabled
                 animator.SetBool("Squished", true);
                 Physics.IgnoreLayerCollision(14, 10);
-				tomatoSound.Play ();
+                if (tomatoSound) {
+                    tomatoSound.Play();
+                }
 				//tomatoSound.loop = false;
             }
             else if (Collectibles.lettuce_acquired && powerUpManager.lettuce_enabled)
@@ -78,7 +80,9 @@ public class DoAction : MonoBehaviour
                	//squish disabled
                 animator.SetBool("Squished", false);
                 Physics.IgnoreLayerCollision(14, 10, false);
-				tomatoSound.Stop ();
+                if (tomatoSound) {
+                    tomatoSound.Stop();
+                }
             }
             else if (Collectibles.lettuce_acquired && powerUpManager.lettuce_enabled)
             {
