@@ -15,12 +15,12 @@ public class Float : MonoBehaviour {
     Vector3 floatForce;
     bool isMounted;
     AudioSource audio;
-    public AudioClip water;
+    //public AudioClip water;
 
 	// Use this for initialization
 	void Start () {
         rb = GetComponent<Rigidbody>();
-        audio = GetComponent<AudioSource>();
+        //audio = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -76,15 +76,15 @@ public class Float : MonoBehaviour {
 
     public void water_audio_on()
     {
-        audio.clip = water;
-        audio.Play();
-        audio.loop = true;
+        //audio.clip = water;
+        //audio.Play();
+        //audio.loop = true;
     }
 
     public void water_audio_off()
     {
-        audio.clip = water;
-        audio.Stop();
+        //audio.clip = water;
+        //audio.Stop();
     }
 
     private void OnCollisionStay(Collision collision)
