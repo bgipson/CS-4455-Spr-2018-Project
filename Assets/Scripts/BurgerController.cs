@@ -160,7 +160,7 @@ public class BurgerController : MonoBehaviour
             if (animator.GetBool("HighJump") && !animator.GetBool("Grounded"))
             {
                 float airAngelDiff = Mathf.Abs(Vector3.Angle(dir, airForward));
-                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(airForward), 0.1f);
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(airForward), 0.05f);
                 airVelocity = Mathf.Lerp(airVelocity, 0.9f, 0.01f);
                 transform.position += airForward * airVelocity;
             }
@@ -183,7 +183,7 @@ public class BurgerController : MonoBehaviour
 
 
 
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), 0.1f);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), 0.05f);
             Debug.Log(transform.forward);
             Debug.Log("transform");
             Debug.Log(Quaternion.LookRotation(dir).eulerAngles);
