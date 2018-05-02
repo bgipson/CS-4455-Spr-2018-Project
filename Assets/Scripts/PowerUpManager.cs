@@ -84,7 +84,10 @@ public class PowerUpManager : MonoBehaviour {
         else if (default_enabled)
         {
             ProgressBar.SetActive(false);
-            BG1.gameObject.SetActive(true);
+            BG1.gameObject.SetActive(false);
+            BG2.gameObject.SetActive(false);
+            BG3.gameObject.SetActive(false);
+            BG4.gameObject.SetActive(false);
         }
 
         if (Collectibles.pickle_acquired)
