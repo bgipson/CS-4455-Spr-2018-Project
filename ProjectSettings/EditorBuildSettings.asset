@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/_Scenes/Menu.unity
     guid: f1752b3bca4edfa449d119a6ebf97b32
   - enabled: 1
-    path: Assets/_Scenes/Instructions.unity
+    path: Assets/_Scenes/Controls.unity
     guid: 041caf69b82c7b64ea54365d344a6274
   - enabled: 1
     path: Assets/_Scenes/Tutorial.unity
@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Kitchen.unity
     guid: b06c3e2cd868b8242bb8e10766a7cd7d
+  - enabled: 1
+    path: Assets/_Scenes/Success.unity
+    guid: b12aadb3caf3cb847ac3700dfb5c33a7
   - enabled: 1
     path: Assets/_Scenes/Credits.unity
     guid: a6468f41cf05509478d900f35dfeced3
