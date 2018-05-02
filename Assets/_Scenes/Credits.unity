@@ -261,7 +261,7 @@ MonoBehaviour:
 
 
 
-    Logo
+    UI and Logo
 
 
     AI
@@ -589,7 +589,8 @@ MonoBehaviour:
   m_Text: "Brandon Gipson\nAnna Greene\nTori Gumtow\nCorey Salmon\nAmbuz Vimal\n\nBrandon
     Gipson\n\nAnna Greene\nTori Gumtow\n\nAnna Greene\n\nBrandon Gipson\nAmbuz Vimal\n\nCorey
     Salmon\n\nAdam Thomas\n\nUnity Asset Store\n\tKitchen Creation Kit\n\nFreeSound.org\n\tShort
-    Crunchy Splat\n\tSpit Toothpaste\n"
+    Crunchy Splat\n\tSpit Toothpaste\n\tSci-Fi Generator or Motor \n\t\tor Forcefield
+    Loop\"\n\tFunny Cartoon Walk\n\nSketchfab\n\tRestaurant Table\n"
 --- !u!222 &1005705378
 CanvasRenderer:
   m_ObjectHideFlags: 0
