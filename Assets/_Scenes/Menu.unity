@@ -1246,7 +1246,6 @@ GameObject:
   - component: {fileID: 1734070146}
   - component: {fileID: 1734070148}
   - component: {fileID: 1734070147}
-  - component: {fileID: 1734070149}
   m_Layer: 5
   m_Name: MainMenuPanel
   m_TagString: Untagged
@@ -1309,19 +1308,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1734070145}
---- !u!114 &1734070149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1734070145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 210910507a43c664d8e3a807870604de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventSystem: {fileID: 2040729531}
-  selectedObject: {fileID: 1230483749}
 --- !u!1 &1859087525
 GameObject:
   m_ObjectHideFlags: 0
