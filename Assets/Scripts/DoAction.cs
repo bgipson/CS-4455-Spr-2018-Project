@@ -16,6 +16,7 @@ public class DoAction : MonoBehaviour
     bool tomatoIgnore;
 	public AudioSource shootSound;
 	public AudioSource shieldSound;
+	public AudioSource tomatoSound;
 
     void Start()
     {
@@ -48,6 +49,8 @@ public class DoAction : MonoBehaviour
                 //squish enabled
                 animator.SetBool("Squished", true);
                 Physics.IgnoreLayerCollision(14, 10);
+				tomatoSound.Play ();
+				//tomatoSound.loop = false;
             }
             else if (Collectibles.lettuce_acquired && powerUpManager.lettuce_enabled)
             {
@@ -72,9 +75,10 @@ public class DoAction : MonoBehaviour
             //}
             else if (Collectibles.tomato_acquired && powerUpManager.tomato_enabled && !tomatoIgnore) //Collectibles.tomato_acquired && 
             {
-                    //squish disabled
-                    animator.SetBool("Squished", false);
-                    Physics.IgnoreLayerCollision(14, 10, false);
+               	//squish disabled
+                animator.SetBool("Squished", false);
+                Physics.IgnoreLayerCollision(14, 10, false);
+				tomatoSound.Stop ();
             }
             else if (Collectibles.lettuce_acquired && powerUpManager.lettuce_enabled)
             {

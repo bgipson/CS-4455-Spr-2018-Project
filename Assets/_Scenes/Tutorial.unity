@@ -1681,6 +1681,9 @@ MonoBehaviour:
   - {fileID: 2800000, guid: dbb67cfe33e907a48b2cab57f2ef599d, type: 3}
   - {fileID: 2800000, guid: 5d2e5f3065958c24eac3f5f47f5b8883, type: 3}
   PowerupIndicator: {fileID: 288125692}
+  PowerupIndicator2: {fileID: 0}
+  PowerupIndicator3: {fileID: 0}
+  PowerupIndicator4: {fileID: 0}
   ProgressBar: {fileID: 240345667}
   dynamicProgressBar: {fileID: 1448168793}
   shoot: {fileID: 1830241181}
@@ -1689,6 +1692,10 @@ MonoBehaviour:
   tomato_enabled: 0
   lettuce_enabled: 0
   default_enabled: 0
+  BG1: {fileID: 0}
+  BG2: {fileID: 0}
+  BG3: {fileID: 0}
+  BG4: {fileID: 0}
 --- !u!4 &356077309
 Transform:
   m_ObjectHideFlags: 0
@@ -1721,6 +1728,7 @@ MonoBehaviour:
   particle: {fileID: 0}
   shootSound: {fileID: 0}
   shieldSound: {fileID: 0}
+  tomatoSound: {fileID: 0}
 --- !u!1001 &412646391
 Prefab:
   m_ObjectHideFlags: 0
@@ -3467,6 +3475,11 @@ Prefab:
       propertyPath: shieldSound
       value: 
       objectReference: {fileID: 860452274}
+    - target: {fileID: 114039754906619776, guid: 1f265cecc31947841ac35dc51126f923,
+        type: 2}
+      propertyPath: tomatoSound
+      value: 
+      objectReference: {fileID: 860452266}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f265cecc31947841ac35dc51126f923, type: 2}
   m_IsPrefabParent: 0
@@ -3852,6 +3865,86 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!82 &860452266
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 860452264}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f911b31dfb2849f4e9a6e7b8325246a6, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &860452271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3930,7 +4023,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -5958,6 +6051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickle: {fileID: 1357583004}
+  powerUpManager: {fileID: 0}
 --- !u!23 &1357583010
 MeshRenderer:
   m_ObjectHideFlags: 0
