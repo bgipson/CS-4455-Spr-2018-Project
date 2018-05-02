@@ -160,7 +160,7 @@ public class BurgerController : MonoBehaviour
             if (animator.GetBool("HighJump") && !animator.GetBool("Grounded"))
             {
                 float airAngelDiff = Mathf.Abs(Vector3.Angle(dir, airForward));
-                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(airForward), 0.05f);
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(airForward), 0.03f);
                 airVelocity = Mathf.Lerp(airVelocity, 0.9f, 0.01f);
                 transform.position += airForward * airVelocity;
             }
@@ -169,7 +169,7 @@ public class BurgerController : MonoBehaviour
                 dir = Vector3.Normalize(new Vector3(Input.GetAxis("Horizontal"), 0, -Input.GetAxis("Vertical")));
                 ang = Vector3.SignedAngle(new Vector3(0, 0, 1f), transform.forward, Vector3.up);
                 dir = Quaternion.AngleAxis(ang, Vector3.up) * dir;
-                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), 0.05f);
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), 0.03f);
                 animator.SetBool("Jump", true);
             }
             joystick = true;
@@ -183,7 +183,7 @@ public class BurgerController : MonoBehaviour
 
 
 
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), 0.05f);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir), 0.005f);
             Debug.Log(transform.forward);
             Debug.Log("transform");
             Debug.Log(Quaternion.LookRotation(dir).eulerAngles);
