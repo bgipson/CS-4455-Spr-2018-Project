@@ -99,7 +99,7 @@ public class FOV_AI : MonoBehaviour {
         int count = Physics.OverlapSphereNonAlloc(FOV_Emitter.position, maxRadius, overlap);
         for(int i=0;i<count + 1; i++)
         {
-            if(overlap[i]!=null)
+            if(i < overlap.Length && overlap[i]!=null)
             {
                 
                 if(overlap[i].transform == target)

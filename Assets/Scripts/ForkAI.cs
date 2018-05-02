@@ -44,7 +44,7 @@ public class ForkAI : MonoBehaviour {
         }
 
         
-        if (rotateToward) {
+        if (rotateToward && target) {
             Vector3 targetDir = target.position - transform.position;
             Quaternion lookRotation = Quaternion.LookRotation(targetDir);
             Vector3 rotation = Quaternion.Lerp(transform.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
