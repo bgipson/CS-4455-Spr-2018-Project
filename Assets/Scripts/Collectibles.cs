@@ -13,10 +13,12 @@ public class Collectibles : MonoBehaviour {
     public static bool tomato_acquired;
     public static bool cheese_acquired;
     public static bool lettuce_acquired;
+    AudioSource audio;
+    public AudioClip collect;
 
     // Use this for initialization
     void Start () {
-		
+        audio = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -45,6 +47,8 @@ public class Collectibles : MonoBehaviour {
         {
             pickle_acquired = true;
             collisionObj = "Pickle";
+            audio.clip = collect;
+            audio.Play();
             Destroy(collision.gameObject);
         }
 
@@ -52,6 +56,8 @@ public class Collectibles : MonoBehaviour {
         {
             cheese_acquired = true;
             collisionObj = "Cheese";
+            audio.clip = collect;
+            audio.Play();
             Destroy(collision.gameObject);
         }
 
@@ -59,6 +65,8 @@ public class Collectibles : MonoBehaviour {
         {
             tomato_acquired = true;
             collisionObj = "Tomato";
+            audio.clip = collect;
+            audio.Play();
             Destroy(collision.gameObject);
             
         }
@@ -67,6 +75,8 @@ public class Collectibles : MonoBehaviour {
         {
             lettuce_acquired = true;
             collisionObj = "Lettuce";
+            audio.clip = collect;
+            audio.Play();
             Destroy(collision.gameObject);
         }
 

@@ -22,6 +22,9 @@ public class BurgerController : MonoBehaviour
     public GroundCheck groundCheck;
     Collectibles manager;
     public int health = 3;
+    public AudioClip hurt;
+    public AudioClip dead;
+    AudioSource audio;
     //Vector3 dir;
 
     public bool joystick = false;
@@ -31,7 +34,7 @@ public class BurgerController : MonoBehaviour
 
     void Start()
     {
-
+        audio = GetComponent<AudioSource>();
         doAction = GetComponent<DoAction>();
         animator = GetComponent<Animator>();
         rig = GetComponent<Rigidbody>();
@@ -265,10 +268,14 @@ public class BurgerController : MonoBehaviour
 
         if (!invincible && other.gameObject.tag == "Enemy" && doAction.shield_on == false)
         {
+            audio.clip = hurt;
+            audio.Play();
             health -= 1;
             if (health <= 0)
             {
                 animator.SetBool("Dead", true);
+                audio.clip = dead;
+                audio.Play();
                 invincible = true;
                 ScreenTransition transition = FindObjectOfType<ScreenTransition>();
                 if (transition)
@@ -287,11 +294,14 @@ public class BurgerController : MonoBehaviour
 
         if (!invincible && other.gameObject.tag == "Fire" && doAction.shield_on == false)
         {
-
+            audio.clip = hurt;
+            audio.Play();
             health -= 1;
             if (health <= 0)
             {
                 animator.SetBool("Dead", true);
+                audio.clip = dead;
+                audio.Play();
                 invincible = true;
                 ScreenTransition transition = FindObjectOfType<ScreenTransition>();
                 if (transition)

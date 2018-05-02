@@ -14,9 +14,10 @@ public class DoAction : MonoBehaviour
     public ParticleSystem particle;
     //float time = 0f;
     bool tomatoIgnore;
-	public AudioSource shootSound;
-	public AudioSource shieldSound;
-	public AudioSource tomatoSound;
+    AudioSource audio;
+	public AudioClip shootSound;
+	public AudioClip shieldSound;
+	//public AudioClip tomatoSound;
 
     void Start()
     {
@@ -24,6 +25,7 @@ public class DoAction : MonoBehaviour
         power = 10f;
         animator = GetComponent<Animator>();
         shield_on = false;
+        audio = GetComponent<AudioSource>();
     }
     
     void Update()
@@ -49,18 +51,20 @@ public class DoAction : MonoBehaviour
                 //squish enabled
                 animator.SetBool("Squished", true);
                 Physics.IgnoreLayerCollision(14, 10);
-                if (tomatoSound) {
-                    tomatoSound.Play();
-                }
+                //if (tomatoSound) {
+                 //   audio.clip = tomatoSound;
+                 //   audio.Play();
+                //}
 				//tomatoSound.loop = false;
             }
             else if (Collectibles.lettuce_acquired && powerUpManager.lettuce_enabled)
             {
                 //shield enabled
                 particle.gameObject.SetActive(true);
-				shieldSound.Play ();
-				shieldSound.loop = true;
+                Shieldsoundon();
+                //audio.loop = true;
                 shield_on = true;
+                Debug.Log("SHield_on)");
             }
 
         }
@@ -80,20 +84,35 @@ public class DoAction : MonoBehaviour
                	//squish disabled
                 animator.SetBool("Squished", false);
                 Physics.IgnoreLayerCollision(14, 10, false);
-                if (tomatoSound) {
-                    tomatoSound.Stop();
-                }
+                //if (tomatoSound) {
+                //    audio.clip = tomatoSound;
+                //    audio.Stop();
+                //}
             }
             else if (Collectibles.lettuce_acquired && powerUpManager.lettuce_enabled)
             {
                 //shield disabled
                 particle.gameObject.SetActive(false);
-				shieldSound.Stop();
+                Shieldsoundoff();
                 shield_on = false;
             }
         }
         
         
+    }
+
+    void Shieldsoundon()
+    {
+        if (shield_on == false) { 
+        audio.clip = shieldSound;
+        audio.Play();
+    }
+    }
+
+    void Shieldsoundoff()
+    {
+        audio.clip = shieldSound;
+        audio.Stop();
     }
 
     void OnTriggerEnter(Collider other)
@@ -174,7 +193,8 @@ public class DoAction : MonoBehaviour
     {
         Rigidbody instantiated_projectile = Instantiate(bullet, Start_position.transform.position, Start_position.transform.rotation);
 		instantiated_projectile.gameObject.SetActive (true);
-		shootSound.Play ();
+        audio.clip = shootSound;
+		audio.Play ();
 
 		instantiated_projectile.AddForce(Start_position.transform.forward * power/10 + new Vector3(0f, 5f/10, 0f), ForceMode.Impulse);
         power = 10f;
