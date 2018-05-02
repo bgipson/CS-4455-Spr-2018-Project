@@ -139,7 +139,7 @@ public class BurgerController : MonoBehaviour
             animator.SetBool("Turning", false);
         }
 
-        animator.SetBool("Fast", (Input.GetKey(KeyCode.LeftShift) || Input.GetKeyDown("joystick button 10")));
+        animator.SetBool("Fast", (Input.GetKey(KeyCode.LeftShift) || Input.GetKeyDown("joystick button 0")));
 
 
     }
